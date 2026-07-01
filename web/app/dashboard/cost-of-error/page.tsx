@@ -31,7 +31,9 @@ interface CostOfError {
   overpaid: number
   underpaid: number
   error_rate: number
-  by_type?: Record<string, number> | { type: string; amount: number }[]
+  by_type?:
+    | Record<string, number | { count: number; amount_cents: number }>
+    | { type: string; amount: number }[]
 }
 
 interface TrendPoint {
@@ -63,7 +65,10 @@ function dollars(cents: number | null | undefined): string {
 function normalizeByType(by: CostOfError['by_type']): { type: string; amount: number }[] {
   if (!by) return []
   if (Array.isArray(by)) return by
-  return Object.entries(by).map(([type, amount]) => ({ type, amount: Number(amount) }))
+  return Object.entries(by).map(([type, value]) => ({
+    type,
+    amount: typeof value === 'number' ? value : Number(value?.amount_cents ?? 0),
+  }))
 }
 
 export default function CostOfErrorPage() {

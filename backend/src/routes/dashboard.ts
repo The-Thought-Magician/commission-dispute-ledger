@@ -32,7 +32,7 @@ router.get('/', async (c) => {
   // Error-rate + recoverable computed from reconciliation lines.
   let errorLines = 0
   let totalLines = 0
-  let recoverable = 0 // underpaid magnitude (owed to reps) — what is recoverable for the workspace
+  let recoverable = 0 // overpaid magnitude (actual > expected) — recoverable from reps via clawback
   for (const recon of recons) {
     const lines = await db
       .select()
@@ -41,8 +41,8 @@ router.get('/', async (c) => {
     for (const l of lines) {
       totalLines++
       if (l.delta_cents !== 0) errorLines++
-      // Underpayments (expected > actual → negative delta) are recoverable owed amounts.
-      if (l.delta_cents < 0) recoverable += -l.delta_cents
+      // delta_cents = actual - expected. Overpayments (actual > expected → positive delta) are recoverable.
+      if (l.delta_cents > 0) recoverable += l.delta_cents
     }
   }
   const errorRate = totalLines > 0 ? errorLines / totalLines : 0
