@@ -217,6 +217,14 @@ export default function ClawbacksPage() {
       setFormError('Amount is required')
       return
     }
+    if (!cbForm.deal_id) {
+      setFormError('Deal is required')
+      return
+    }
+    if (!cbForm.rep_id) {
+      setFormError('Rep is required')
+      return
+    }
     setSaving(true)
     setFormError(null)
     try {
@@ -704,7 +712,7 @@ export default function ClawbacksPage() {
             </div>
           )}
           <div className="grid grid-cols-2 gap-4">
-            <Field label="Rep">
+            <Field label="Rep *">
               <select
                 value={cbForm.rep_id}
                 onChange={(e) => setCbForm((f) => ({ ...f, rep_id: e.target.value }))}
@@ -718,7 +726,7 @@ export default function ClawbacksPage() {
                 ))}
               </select>
             </Field>
-            <Field label="Deal">
+            <Field label="Deal *">
               <select
                 value={cbForm.deal_id}
                 onChange={(e) => setCbForm((f) => ({ ...f, deal_id: e.target.value }))}
