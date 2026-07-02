@@ -180,7 +180,7 @@ export default function WorkspacesPage() {
               type="checkbox"
               checked={seedErrors}
               onChange={(e) => setSeedErrors(e.target.checked)}
-              className="h-4 w-4 rounded border-slate-600 bg-slate-800 text-emerald-500 focus:ring-emerald-500/40"
+              className="h-4 w-4 rounded border-slate-600 bg-slate-800 text-fuchsia-500 focus:ring-fuchsia-500/40"
             />
             Inject deliberate payout errors
           </label>
@@ -192,7 +192,7 @@ export default function WorkspacesPage() {
           value={search}
           onChange={(e) => setSearch(e.target.value)}
           placeholder="Search workspaces…"
-          className="w-full max-w-xs rounded-lg border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-slate-200 placeholder:text-slate-600 focus:outline-none focus:ring-2 focus:ring-emerald-500/40"
+          className="w-full max-w-xs rounded-lg border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-slate-200 placeholder:text-slate-600 focus:outline-none focus:ring-2 focus:ring-fuchsia-500/40"
         />
         <span className="text-xs text-slate-500">
           {filtered.length} of {workspaces.length}
@@ -222,7 +222,7 @@ export default function WorkspacesPage() {
             return (
               <Card
                 key={w.id}
-                className={isActive ? 'border-emerald-500/50 ring-1 ring-emerald-500/20' : ''}
+                className={isActive ? 'border-fuchsia-500/50 ring-1 ring-fuchsia-500/20' : ''}
               >
                 <CardBody className="space-y-4">
                   <div className="flex items-start justify-between gap-3">
@@ -314,7 +314,7 @@ export default function WorkspacesPage() {
               value={name}
               onChange={(e) => setName(e.target.value)}
               placeholder="Acme Sales — FY26"
-              className="w-full rounded-lg border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-slate-200 placeholder:text-slate-600 focus:outline-none focus:ring-2 focus:ring-emerald-500/40"
+              className="w-full rounded-lg border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-slate-200 placeholder:text-slate-600 focus:outline-none focus:ring-2 focus:ring-fuchsia-500/40"
             />
           </div>
           <div className="grid grid-cols-2 gap-3">
@@ -323,7 +323,7 @@ export default function WorkspacesPage() {
               <select
                 value={currency}
                 onChange={(e) => setCurrency(e.target.value)}
-                className="w-full rounded-lg border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-slate-200 focus:outline-none focus:ring-2 focus:ring-emerald-500/40"
+                className="w-full rounded-lg border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-slate-200 focus:outline-none focus:ring-2 focus:ring-fuchsia-500/40"
               >
                 {CURRENCIES.map((c) => (
                   <option key={c} value={c}>
@@ -337,7 +337,7 @@ export default function WorkspacesPage() {
               <select
                 value={fiscalStart}
                 onChange={(e) => setFiscalStart(parseInt(e.target.value, 10))}
-                className="w-full rounded-lg border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-slate-200 focus:outline-none focus:ring-2 focus:ring-emerald-500/40"
+                className="w-full rounded-lg border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-slate-200 focus:outline-none focus:ring-2 focus:ring-fuchsia-500/40"
               >
                 {MONTHS.map((m, i) => (
                   <option key={m} value={i + 1}>
@@ -351,7 +351,7 @@ export default function WorkspacesPage() {
               <select
                 value={rounding}
                 onChange={(e) => setRounding(e.target.value)}
-                className="w-full rounded-lg border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-slate-200 focus:outline-none focus:ring-2 focus:ring-emerald-500/40"
+                className="w-full rounded-lg border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-slate-200 focus:outline-none focus:ring-2 focus:ring-fuchsia-500/40"
               >
                 {ROUNDING.map((r) => (
                   <option key={r} value={r}>
@@ -367,7 +367,7 @@ export default function WorkspacesPage() {
                 min={0}
                 value={tolerance}
                 onChange={(e) => setTolerance(e.target.value)}
-                className="w-full rounded-lg border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-slate-200 focus:outline-none focus:ring-2 focus:ring-emerald-500/40"
+                className="w-full rounded-lg border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-slate-200 focus:outline-none focus:ring-2 focus:ring-fuchsia-500/40"
               />
             </div>
           </div>

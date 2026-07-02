@@ -10,7 +10,7 @@ interface StatProps {
 
 const valueTone: Record<NonNullable<StatProps['tone']>, string> = {
   default: 'text-white',
-  success: 'text-emerald-400',
+  success: 'text-fuchsia-400',
   warning: 'text-amber-400',
   danger: 'text-red-400',
 }

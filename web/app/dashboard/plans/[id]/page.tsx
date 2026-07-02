@@ -58,7 +58,7 @@ type ValidateResult = { valid: boolean; issues: string[] }
 type SplitCheck = { total: number; ok: boolean; policy?: string }
 
 const inputCls =
-  'w-full rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 placeholder-slate-500 focus:border-emerald-500 focus:outline-none'
+  'w-full rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 placeholder-slate-500 focus:border-fuchsia-500 focus:outline-none'
 
 function num(v: unknown): number {
   const n = typeof v === 'string' ? parseFloat(v) : (v as number)
@@ -203,7 +203,7 @@ export default function PlanDetailPage({ params }: { params: Promise<{ id: strin
   if (error && !plan) {
     return (
       <div className="space-y-4">
-        <Link href="/dashboard/plans" className="text-sm text-emerald-400 hover:underline">
+        <Link href="/dashboard/plans" className="text-sm text-fuchsia-400 hover:underline">
           ← Back to plans
         </Link>
         <EmptyState title="Could not load plan" description={error} />
@@ -216,7 +216,7 @@ export default function PlanDetailPage({ params }: { params: Promise<{ id: strin
   return (
     <div className="space-y-6">
       <div>
-        <Link href="/dashboard/plans" className="text-sm text-emerald-400 hover:underline">
+        <Link href="/dashboard/plans" className="text-sm text-fuchsia-400 hover:underline">
           ← Back to plans
         </Link>
       </div>
@@ -269,7 +269,7 @@ export default function PlanDetailPage({ params }: { params: Promise<{ id: strin
                     onClick={() => selectVersion(v.id)}
                     className={`rounded-lg border px-3 py-2 text-left text-sm transition-colors ${
                       active
-                        ? 'border-emerald-500/50 bg-emerald-500/15 text-emerald-200'
+                        ? 'border-fuchsia-500/50 bg-fuchsia-500/15 text-fuchsia-200'
                         : 'border-slate-700 bg-slate-950 text-slate-300 hover:border-slate-600'
                     }`}
                   >
@@ -438,7 +438,7 @@ export default function PlanDetailPage({ params }: { params: Promise<{ id: strin
                     <p className="text-xs text-slate-500">
                       Role-based credit splits.{' '}
                       {splitCheck && (
-                        <span className={splitCheck.ok ? 'text-emerald-400' : 'text-amber-400'}>
+                        <span className={splitCheck.ok ? 'text-fuchsia-400' : 'text-amber-400'}>
                           Total {num(splitCheck.total)}% — {splitCheck.ok ? 'OK' : 'off policy'}
                         </span>
                       )}
@@ -491,7 +491,7 @@ export default function PlanDetailPage({ params }: { params: Promise<{ id: strin
                         <div className="flex h-3 w-full overflow-hidden rounded-full bg-slate-800">
                           {splits.map((s, i) => {
                             const pct = Math.max(0, Math.min(100, num(s.percentage)))
-                            const palette = ['bg-emerald-500', 'bg-teal-500', 'bg-sky-500', 'bg-amber-500', 'bg-violet-500']
+                            const palette = ['bg-fuchsia-500', 'bg-teal-500', 'bg-sky-500', 'bg-amber-500', 'bg-violet-500']
                             return (
                               <div
                                 key={s.id}
@@ -592,7 +592,7 @@ function Field({ label, required, children }: { label: string; required?: boolea
   return (
     <label className="block">
       <span className="mb-1 block text-xs font-medium uppercase tracking-wide text-slate-400">
-        {label} {required && <span className="text-emerald-400">*</span>}
+        {label} {required && <span className="text-fuchsia-400">*</span>}
       </span>
       {children}
     </label>
@@ -982,7 +982,7 @@ function SplitModal({
           <input type="number" step="0.01" value={percentage} onChange={(e) => setPercentage(e.target.value)} className={inputCls} />
         </Field>
         <label className="flex items-center gap-2 text-sm text-slate-300">
-          <input type="checkbox" checked={isDefault} onChange={(e) => setIsDefault(e.target.checked)} className="h-4 w-4 rounded border-slate-600 bg-slate-950 text-emerald-500" />
+          <input type="checkbox" checked={isDefault} onChange={(e) => setIsDefault(e.target.checked)} className="h-4 w-4 rounded border-slate-600 bg-slate-950 text-fuchsia-500" />
           Default split rule
         </label>
       </form>

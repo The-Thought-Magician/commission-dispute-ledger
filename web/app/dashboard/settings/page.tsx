@@ -285,7 +285,7 @@ export default function SettingsPage() {
           <select
             value={workspaceId}
             onChange={(e) => onSwitchWorkspace(e.target.value)}
-            className="rounded-lg border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-slate-200 focus:border-emerald-500 focus:outline-none"
+            className="rounded-lg border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-slate-200 focus:border-fuchsia-500 focus:outline-none"
           >
             {workspaces.map((w) => (
               <option key={w.id} value={w.id}>
@@ -452,13 +452,13 @@ export default function SettingsPage() {
 
             <ul className="space-y-1 pt-2 text-sm text-slate-400">
               <li className="flex items-center gap-2">
-                <span className="text-emerald-400">✓</span> Unlimited reconciliations &amp; derivation runs
+                <span className="text-fuchsia-400">✓</span> Unlimited reconciliations &amp; derivation runs
               </li>
               <li className="flex items-center gap-2">
-                <span className="text-emerald-400">✓</span> Dispute workflow &amp; finance accruals
+                <span className="text-fuchsia-400">✓</span> Dispute workflow &amp; finance accruals
               </li>
               <li className="flex items-center gap-2">
-                <span className="text-emerald-400">✓</span> Audit log &amp; CSV/JSON exports
+                <span className="text-fuchsia-400">✓</span> Audit log &amp; CSV/JSON exports
               </li>
             </ul>
           </CardBody>
@@ -612,7 +612,7 @@ export default function SettingsPage() {
 }
 
 const inputClass =
-  'w-full rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 placeholder-slate-500 focus:border-emerald-500 focus:outline-none'
+  'w-full rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 placeholder-slate-500 focus:border-fuchsia-500 focus:outline-none'
 
 function Field({ label, children }: { label: string; children: React.ReactNode }) {
   return (

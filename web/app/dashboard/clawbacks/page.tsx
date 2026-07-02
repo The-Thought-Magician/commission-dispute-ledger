@@ -391,7 +391,7 @@ export default function ClawbacksPage() {
             <select
               value={workspaceId}
               onChange={(e) => onSwitchWorkspace(e.target.value)}
-              className="rounded-lg border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-slate-200 focus:border-emerald-500 focus:outline-none"
+              className="rounded-lg border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-slate-200 focus:border-fuchsia-500 focus:outline-none"
             >
               {workspaces.map((w) => (
                 <option key={w.id} value={w.id}>
@@ -457,12 +457,12 @@ export default function ClawbacksPage() {
                   value={search}
                   onChange={(e) => setSearch(e.target.value)}
                   placeholder="Search reason, rep, deal..."
-                  className="w-full max-w-xs rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 placeholder-slate-500 focus:border-emerald-500 focus:outline-none"
+                  className="w-full max-w-xs rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 placeholder-slate-500 focus:border-fuchsia-500 focus:outline-none"
                 />
                 <select
                   value={statusFilter}
                   onChange={(e) => setStatusFilter(e.target.value)}
-                  className="rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 focus:border-emerald-500 focus:outline-none"
+                  className="rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 focus:border-fuchsia-500 focus:outline-none"
                 >
                   <option value="all">All statuses</option>
                   {tab === 'clawbacks' ? (
@@ -539,7 +539,7 @@ export default function ClawbacksPage() {
                                 <>
                                   <Button
                                     variant="ghost"
-                                    className="px-2 py-1 text-xs text-emerald-400 hover:text-emerald-300"
+                                    className="px-2 py-1 text-xs text-fuchsia-400 hover:text-fuchsia-300"
                                     onClick={() => setClawbackStatus(c, 'applied')}
                                   >
                                     Apply
@@ -614,7 +614,7 @@ export default function ClawbacksPage() {
                           </TD>
                           <TD
                             className={`text-right tabular-nums font-medium ${
-                              dir === 'credit' ? 'text-emerald-300' : 'text-red-300'
+                              dir === 'credit' ? 'text-fuchsia-300' : 'text-red-300'
                             }`}
                           >
                             {dir === 'credit' ? '+' : '−'}
@@ -627,7 +627,7 @@ export default function ClawbacksPage() {
                             {a.dispute_id ? (
                               <Link
                                 href={`/dashboard/disputes/${a.dispute_id}`}
-                                className="text-emerald-300 hover:text-emerald-200"
+                                className="text-fuchsia-300 hover:text-fuchsia-200"
                               >
                                 View
                               </Link>
@@ -646,7 +646,7 @@ export default function ClawbacksPage() {
                                 <>
                                   <Button
                                     variant="ghost"
-                                    className="px-2 py-1 text-xs text-emerald-400 hover:text-emerald-300"
+                                    className="px-2 py-1 text-xs text-fuchsia-400 hover:text-fuchsia-300"
                                     onClick={() => setAdjustmentStatus(a, 'approved')}
                                   >
                                     Approve
@@ -716,7 +716,7 @@ export default function ClawbacksPage() {
               <select
                 value={cbForm.rep_id}
                 onChange={(e) => setCbForm((f) => ({ ...f, rep_id: e.target.value }))}
-                className="w-full rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 focus:border-emerald-500 focus:outline-none"
+                className="w-full rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 focus:border-fuchsia-500 focus:outline-none"
               >
                 <option value="">— None —</option>
                 {reps.map((r) => (
@@ -730,7 +730,7 @@ export default function ClawbacksPage() {
               <select
                 value={cbForm.deal_id}
                 onChange={(e) => setCbForm((f) => ({ ...f, deal_id: e.target.value }))}
-                className="w-full rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 focus:border-emerald-500 focus:outline-none"
+                className="w-full rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 focus:border-fuchsia-500 focus:outline-none"
               >
                 <option value="">— None —</option>
                 {deals.map((d) => (
@@ -746,7 +746,7 @@ export default function ClawbacksPage() {
               <input
                 value={cbForm.original_payout}
                 onChange={(e) => setCbForm((f) => ({ ...f, original_payout: e.target.value }))}
-                className="w-full rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 focus:border-emerald-500 focus:outline-none"
+                className="w-full rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 focus:border-fuchsia-500 focus:outline-none"
                 placeholder="0.00"
                 inputMode="decimal"
               />
@@ -755,7 +755,7 @@ export default function ClawbacksPage() {
               <input
                 value={cbForm.amount}
                 onChange={(e) => setCbForm((f) => ({ ...f, amount: e.target.value }))}
-                className="w-full rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 focus:border-emerald-500 focus:outline-none"
+                className="w-full rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 focus:border-fuchsia-500 focus:outline-none"
                 placeholder="0.00"
                 inputMode="decimal"
               />
@@ -766,7 +766,7 @@ export default function ClawbacksPage() {
               value={cbForm.reason}
               onChange={(e) => setCbForm((f) => ({ ...f, reason: e.target.value }))}
               rows={3}
-              className="w-full rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 focus:border-emerald-500 focus:outline-none"
+              className="w-full rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 focus:border-fuchsia-500 focus:outline-none"
               placeholder="Deal returned / overpayment on Q2 acceleration..."
             />
           </Field>
@@ -774,7 +774,7 @@ export default function ClawbacksPage() {
             <select
               value={cbForm.status}
               onChange={(e) => setCbForm((f) => ({ ...f, status: e.target.value }))}
-              className="w-full rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 focus:border-emerald-500 focus:outline-none"
+              className="w-full rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 focus:border-fuchsia-500 focus:outline-none"
             >
               <option value="pending">Pending</option>
               <option value="applied">Applied</option>
@@ -810,7 +810,7 @@ export default function ClawbacksPage() {
             <select
               value={adjForm.rep_id}
               onChange={(e) => setAdjForm((f) => ({ ...f, rep_id: e.target.value }))}
-              className="w-full rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 focus:border-emerald-500 focus:outline-none"
+              className="w-full rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 focus:border-fuchsia-500 focus:outline-none"
             >
               <option value="">— None —</option>
               {reps.map((r) => (
@@ -825,7 +825,7 @@ export default function ClawbacksPage() {
               <select
                 value={adjForm.direction}
                 onChange={(e) => setAdjForm((f) => ({ ...f, direction: e.target.value }))}
-                className="w-full rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 focus:border-emerald-500 focus:outline-none"
+                className="w-full rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 focus:border-fuchsia-500 focus:outline-none"
               >
                 <option value="credit">Credit (+)</option>
                 <option value="debit">Debit (−)</option>
@@ -835,7 +835,7 @@ export default function ClawbacksPage() {
               <input
                 value={adjForm.amount}
                 onChange={(e) => setAdjForm((f) => ({ ...f, amount: e.target.value }))}
-                className="w-full rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 focus:border-emerald-500 focus:outline-none"
+                className="w-full rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 focus:border-fuchsia-500 focus:outline-none"
                 placeholder="0.00"
                 inputMode="decimal"
               />
@@ -846,7 +846,7 @@ export default function ClawbacksPage() {
               value={adjForm.reason}
               onChange={(e) => setAdjForm((f) => ({ ...f, reason: e.target.value }))}
               rows={3}
-              className="w-full rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 focus:border-emerald-500 focus:outline-none"
+              className="w-full rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 focus:border-fuchsia-500 focus:outline-none"
               placeholder="True-up for late-posted split credit..."
             />
           </Field>
@@ -854,7 +854,7 @@ export default function ClawbacksPage() {
             <select
               value={adjForm.status}
               onChange={(e) => setAdjForm((f) => ({ ...f, status: e.target.value }))}
-              className="w-full rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 focus:border-emerald-500 focus:outline-none"
+              className="w-full rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 focus:border-fuchsia-500 focus:outline-none"
             >
               <option value="pending">Pending</option>
               <option value="approved">Approved</option>
@@ -903,7 +903,7 @@ function TabButton({
       onClick={onClick}
       className={`-mb-px border-b-2 px-4 py-2 text-sm font-medium transition-colors ${
         active
-          ? 'border-emerald-500 text-emerald-300'
+          ? 'border-fuchsia-500 text-fuchsia-300'
           : 'border-transparent text-slate-400 hover:text-slate-200'
       }`}
     >

@@ -235,7 +235,7 @@ export default function ReconciliationDetailPage() {
   if (error) {
     return (
       <div className="space-y-4">
-        <Link href="/dashboard/reconciliations" className="text-sm text-emerald-400 hover:text-emerald-300">
+        <Link href="/dashboard/reconciliations" className="text-sm text-fuchsia-400 hover:text-fuchsia-300">
           ← Back to reconciliations
         </Link>
         <EmptyState
@@ -250,7 +250,7 @@ export default function ReconciliationDetailPage() {
   if (!recon) {
     return (
       <div className="space-y-4">
-        <Link href="/dashboard/reconciliations" className="text-sm text-emerald-400 hover:text-emerald-300">
+        <Link href="/dashboard/reconciliations" className="text-sm text-fuchsia-400 hover:text-fuchsia-300">
           ← Back to reconciliations
         </Link>
         <EmptyState title="Reconciliation not found" />
@@ -267,7 +267,7 @@ export default function ReconciliationDetailPage() {
         <div>
           <Link
             href="/dashboard/reconciliations"
-            className="text-sm text-emerald-400 hover:text-emerald-300"
+            className="text-sm text-fuchsia-400 hover:text-fuchsia-300"
           >
             ← Back to reconciliations
           </Link>
@@ -339,12 +339,12 @@ export default function ReconciliationDetailPage() {
               value={search}
               onChange={(e) => setSearch(e.target.value)}
               placeholder="Search rep / deal / class…"
-              className="rounded-lg border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-slate-200 placeholder:text-slate-600 focus:border-emerald-500 focus:outline-none"
+              className="rounded-lg border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-slate-200 placeholder:text-slate-600 focus:border-fuchsia-500 focus:outline-none"
             />
             <select
               value={filter}
               onChange={(e) => setFilter(e.target.value as typeof filter)}
-              className="rounded-lg border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-slate-200 focus:border-emerald-500 focus:outline-none"
+              className="rounded-lg border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-slate-200 focus:border-fuchsia-500 focus:outline-none"
             >
               <option value="all">All lines</option>
               <option value="mismatch">Mismatches only</option>
@@ -383,7 +383,7 @@ export default function ReconciliationDetailPage() {
                   const tone = deltaTone(ln.delta_cents, recon.tolerance_cents)
                   const pct = Math.round((Math.abs(ln.delta_cents) / maxAbsDelta) * 100)
                   const barColor =
-                    tone === 'success' ? 'bg-emerald-500' : tone === 'warning' ? 'bg-amber-500' : 'bg-red-500'
+                    tone === 'success' ? 'bg-fuchsia-500' : tone === 'warning' ? 'bg-amber-500' : 'bg-red-500'
                   return (
                     <TR key={ln.id}>
                       <TD className="font-mono text-xs text-slate-400">{ln.rep_id ?? '—'}</TD>

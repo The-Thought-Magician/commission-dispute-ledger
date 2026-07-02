@@ -261,12 +261,12 @@ export default function ReconciliationsPage() {
           value={search}
           onChange={(e) => setSearch(e.target.value)}
           placeholder="Search by period or id..."
-          className="w-full rounded-lg border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-slate-200 placeholder:text-slate-500 focus:border-emerald-500 focus:outline-none sm:max-w-xs"
+          className="w-full rounded-lg border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-slate-200 placeholder:text-slate-500 focus:border-fuchsia-500 focus:outline-none sm:max-w-xs"
         />
         <select
           value={statusFilter}
           onChange={(e) => setStatusFilter(e.target.value)}
-          className="rounded-lg border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-slate-200 focus:border-emerald-500 focus:outline-none"
+          className="rounded-lg border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-slate-200 focus:border-fuchsia-500 focus:outline-none"
         >
           <option value="">All statuses</option>
           <option value="open">Open</option>
@@ -313,7 +313,7 @@ export default function ReconciliationsPage() {
                   <TD>
                     <Link
                       href={`/dashboard/reconciliations/${r.id}`}
-                      className="font-medium text-emerald-300 hover:underline"
+                      className="font-medium text-fuchsia-300 hover:underline"
                     >
                       {periodLabel(r.period_id)}
                     </Link>
@@ -399,7 +399,7 @@ export default function ReconciliationsPage() {
                 setRunDerivation('')
                 setRunActual('')
               }}
-              className="w-full rounded-lg border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-slate-200 focus:border-emerald-500 focus:outline-none"
+              className="w-full rounded-lg border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-slate-200 focus:border-fuchsia-500 focus:outline-none"
             >
               <option value="">Select period...</option>
               {periods.map((p) => (
@@ -415,7 +415,7 @@ export default function ReconciliationsPage() {
             <select
               value={runDerivation}
               onChange={(e) => setRunDerivation(e.target.value)}
-              className="w-full rounded-lg border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-slate-200 focus:border-emerald-500 focus:outline-none"
+              className="w-full rounded-lg border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-slate-200 focus:border-fuchsia-500 focus:outline-none"
             >
               <option value="">Select derivation run...</option>
               {derivationOptions.map((d) => (
@@ -434,7 +434,7 @@ export default function ReconciliationsPage() {
             <select
               value={runActual}
               onChange={(e) => setRunActual(e.target.value)}
-              className="w-full rounded-lg border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-slate-200 focus:border-emerald-500 focus:outline-none"
+              className="w-full rounded-lg border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-slate-200 focus:border-fuchsia-500 focus:outline-none"
             >
               <option value="">Select actual run...</option>
               {actualOptions.map((a) => (

@@ -289,7 +289,7 @@ export default function DerivationsPage() {
                   const h = Math.max(4, Math.round((v / maxTotal) * 140))
                   const tone = STATUS_TONE[r.status]
                   const color =
-                    tone === 'danger' ? 'bg-red-500/70' : tone === 'success' ? 'bg-emerald-500/70' : 'bg-slate-600'
+                    tone === 'danger' ? 'bg-red-500/70' : tone === 'success' ? 'bg-fuchsia-500/70' : 'bg-slate-600'
                   return (
                     <div key={r.id} className="flex min-w-[28px] flex-1 flex-col items-center gap-1">
                       <div
@@ -312,13 +312,13 @@ export default function DerivationsPage() {
             value={search}
             onChange={(e) => setSearch(e.target.value)}
             placeholder="Search by id / hash / period..."
-            className="w-full max-w-xs rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 placeholder-slate-500 focus:border-emerald-500 focus:outline-none"
+            className="w-full max-w-xs rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 placeholder-slate-500 focus:border-fuchsia-500 focus:outline-none"
           />
           <div className="flex flex-wrap items-center gap-2">
             <select
               value={periodFilter}
               onChange={(e) => setPeriodFilter(e.target.value)}
-              className="rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 focus:border-emerald-500 focus:outline-none"
+              className="rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 focus:border-fuchsia-500 focus:outline-none"
             >
               <option value="all">All periods</option>
               {periods.map((p) => (
@@ -330,7 +330,7 @@ export default function DerivationsPage() {
             <select
               value={statusFilter}
               onChange={(e) => setStatusFilter(e.target.value)}
-              className="rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 focus:border-emerald-500 focus:outline-none"
+              className="rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 focus:border-fuchsia-500 focus:outline-none"
             >
               <option value="all">All statuses</option>
               {statusOptions.map((s) => (
@@ -374,7 +374,7 @@ export default function DerivationsPage() {
                 {filtered.map((r) => (
                   <TR key={r.id}>
                     <TD className="font-mono text-xs text-slate-300">
-                      <Link href={`/dashboard/derivations/${r.id}`} className="hover:text-emerald-300">
+                      <Link href={`/dashboard/derivations/${r.id}`} className="hover:text-fuchsia-300">
                         {r.id.slice(0, 8)}
                       </Link>
                       {r.inputs_hash && (
@@ -442,7 +442,7 @@ export default function DerivationsPage() {
                 <select
                   value={runForm.period_id}
                   onChange={(e) => setRunForm({ ...runForm, period_id: e.target.value })}
-                  className="w-full rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 focus:border-emerald-500 focus:outline-none"
+                  className="w-full rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 focus:border-fuchsia-500 focus:outline-none"
                 >
                   <option value="">Select period...</option>
                   {periods.map((p) => (
@@ -456,7 +456,7 @@ export default function DerivationsPage() {
                 <select
                   value={runForm.plan_id}
                   onChange={(e) => setRunForm({ ...runForm, plan_id: e.target.value, plan_version_id: '' })}
-                  className="w-full rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 focus:border-emerald-500 focus:outline-none"
+                  className="w-full rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 focus:border-fuchsia-500 focus:outline-none"
                 >
                   <option value="">Select plan...</option>
                   {plans.map((p) => (
@@ -471,7 +471,7 @@ export default function DerivationsPage() {
                   value={runForm.plan_version_id}
                   onChange={(e) => setRunForm({ ...runForm, plan_version_id: e.target.value })}
                   disabled={versionsLoading || !runForm.plan_id}
-                  className="w-full rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 focus:border-emerald-500 focus:outline-none disabled:opacity-50"
+                  className="w-full rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 focus:border-fuchsia-500 focus:outline-none disabled:opacity-50"
                 >
                   {versionsLoading && <option value="">Loading versions...</option>}
                   {!versionsLoading && versions.length === 0 && (

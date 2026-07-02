@@ -232,7 +232,7 @@ export default function DisputesListPage() {
             <select
               value={statusFilter}
               onChange={(e) => setStatusFilter(e.target.value)}
-              className="rounded-lg border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-slate-200 focus:border-emerald-500 focus:outline-none"
+              className="rounded-lg border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-slate-200 focus:border-fuchsia-500 focus:outline-none"
             >
               <option value="">All statuses</option>
               {STATUS_OPTIONS.map((s) => (
@@ -245,7 +245,7 @@ export default function DisputesListPage() {
               value={search}
               onChange={(e) => setSearch(e.target.value)}
               placeholder="Search narrative / rep / assignee…"
-              className="w-64 rounded-lg border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-slate-200 placeholder:text-slate-600 focus:border-emerald-500 focus:outline-none"
+              className="w-64 rounded-lg border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-slate-200 placeholder:text-slate-600 focus:border-fuchsia-500 focus:outline-none"
             />
           </div>
           {loading && <Spinner />}
@@ -320,7 +320,7 @@ export default function DisputesListPage() {
                     <TD className="text-right">
                       <Link
                         href={`/dashboard/disputes/${d.id}`}
-                        className="text-sm font-medium text-emerald-400 hover:text-emerald-300"
+                        className="text-sm font-medium text-fuchsia-400 hover:text-fuchsia-300"
                       >
                         Open →
                       </Link>
@@ -356,7 +356,7 @@ export default function DisputesListPage() {
               value={form.rep_id}
               onChange={(e) => setForm((f) => ({ ...f, rep_id: e.target.value }))}
               required
-              className="w-full rounded-lg border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-slate-200 focus:border-emerald-500 focus:outline-none"
+              className="w-full rounded-lg border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-slate-200 focus:border-fuchsia-500 focus:outline-none"
             >
               <option value="">Select a rep…</option>
               {reps.map((r) => (
@@ -371,7 +371,7 @@ export default function DisputesListPage() {
             <select
               value={form.period_id}
               onChange={(e) => setForm((f) => ({ ...f, period_id: e.target.value }))}
-              className="w-full rounded-lg border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-slate-200 focus:border-emerald-500 focus:outline-none"
+              className="w-full rounded-lg border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-slate-200 focus:border-fuchsia-500 focus:outline-none"
             >
               <option value="">No period</option>
               {periods.map((p) => (
@@ -393,7 +393,7 @@ export default function DisputesListPage() {
               onChange={(e) => setForm((f) => ({ ...f, claimed_amount: e.target.value }))}
               required
               placeholder="0.00"
-              className="w-full rounded-lg border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-slate-200 placeholder:text-slate-600 focus:border-emerald-500 focus:outline-none"
+              className="w-full rounded-lg border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-slate-200 placeholder:text-slate-600 focus:border-fuchsia-500 focus:outline-none"
             />
           </div>
           <div className="grid grid-cols-2 gap-3">
@@ -405,7 +405,7 @@ export default function DisputesListPage() {
                 value={form.assignee}
                 onChange={(e) => setForm((f) => ({ ...f, assignee: e.target.value }))}
                 placeholder="user id / email"
-                className="w-full rounded-lg border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-slate-200 placeholder:text-slate-600 focus:border-emerald-500 focus:outline-none"
+                className="w-full rounded-lg border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-slate-200 placeholder:text-slate-600 focus:border-fuchsia-500 focus:outline-none"
               />
             </div>
             <div>
@@ -416,7 +416,7 @@ export default function DisputesListPage() {
                 type="date"
                 value={form.due_date}
                 onChange={(e) => setForm((f) => ({ ...f, due_date: e.target.value }))}
-                className="w-full rounded-lg border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-slate-200 focus:border-emerald-500 focus:outline-none"
+                className="w-full rounded-lg border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-slate-200 focus:border-fuchsia-500 focus:outline-none"
               />
             </div>
           </div>
@@ -429,7 +429,7 @@ export default function DisputesListPage() {
               onChange={(e) => setForm((f) => ({ ...f, narrative: e.target.value }))}
               rows={3}
               placeholder="Describe what the rep is disputing…"
-              className="w-full rounded-lg border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-slate-200 placeholder:text-slate-600 focus:border-emerald-500 focus:outline-none"
+              className="w-full rounded-lg border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-slate-200 placeholder:text-slate-600 focus:border-fuchsia-500 focus:outline-none"
             />
           </div>
         </form>

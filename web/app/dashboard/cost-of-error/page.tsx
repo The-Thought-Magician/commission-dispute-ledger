@@ -229,7 +229,7 @@ export default function CostOfErrorPage() {
             <select
               value={workspaceId}
               onChange={(e) => onSwitchWorkspace(e.target.value)}
-              className="rounded-lg border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-slate-200 focus:border-emerald-500 focus:outline-none"
+              className="rounded-lg border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-slate-200 focus:border-fuchsia-500 focus:outline-none"
             >
               {workspaces.map((w) => (
                 <option key={w.id} value={w.id}>
@@ -242,7 +242,7 @@ export default function CostOfErrorPage() {
             value={periodId}
             onChange={(e) => onSwitchPeriod(e.target.value)}
             disabled={!workspaceId}
-            className="rounded-lg border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-slate-200 focus:border-emerald-500 focus:outline-none"
+            className="rounded-lg border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-slate-200 focus:border-fuchsia-500 focus:outline-none"
           >
             <option value="">All periods</option>
             {periods.map((p) => (
@@ -357,7 +357,7 @@ export default function CostOfErrorPage() {
                         </div>
                         <div className="h-2 w-full overflow-hidden rounded-full bg-slate-800">
                           <div
-                            className="h-2 rounded-full bg-emerald-500"
+                            className="h-2 rounded-full bg-fuchsia-500"
                             style={{ width: `${(Math.abs(b.amount) / byTypeMax) * 100}%` }}
                           />
                         </div>
@@ -416,7 +416,7 @@ export default function CostOfErrorPage() {
                     {quota.map((q) => {
                       const attPct = q.attainment_pct <= 1 ? q.attainment_pct * 100 : q.attainment_pct
                       const tone =
-                        attPct >= 100 ? 'text-emerald-300' : attPct >= 70 ? 'text-amber-300' : 'text-red-300'
+                        attPct >= 100 ? 'text-fuchsia-300' : attPct >= 70 ? 'text-amber-300' : 'text-red-300'
                       return (
                         <TR key={q.rep_id}>
                           <TD className="font-medium text-slate-100">{repName(q.rep_id)}</TD>
@@ -429,7 +429,7 @@ export default function CostOfErrorPage() {
                               <div
                                 className={`h-2 rounded-full ${
                                   attPct >= 100
-                                    ? 'bg-emerald-500'
+                                    ? 'bg-fuchsia-500'
                                     : attPct >= 70
                                       ? 'bg-amber-500'
                                       : 'bg-red-500'
@@ -479,7 +479,7 @@ export default function CostOfErrorPage() {
                           <TD className="text-right tabular-nums text-slate-400">
                             {l.quota_cents != null ? dollars(l.quota_cents) : '—'}
                           </TD>
-                          <TD className="text-right tabular-nums font-medium text-emerald-300">
+                          <TD className="text-right tabular-nums font-medium text-fuchsia-300">
                             {attPct.toFixed(1)}%
                           </TD>
                         </TR>

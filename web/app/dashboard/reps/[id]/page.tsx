@@ -198,7 +198,7 @@ export default function RepDetailPage() {
   if (error || !rep) {
     return (
       <div className="space-y-4">
-        <Link href="/dashboard/reps" className="text-sm text-emerald-400 hover:text-emerald-300">
+        <Link href="/dashboard/reps" className="text-sm text-fuchsia-400 hover:text-fuchsia-300">
           ← Back to roster
         </Link>
         <EmptyState
@@ -216,7 +216,7 @@ export default function RepDetailPage() {
 
   return (
     <div className="space-y-6">
-      <Link href="/dashboard/reps" className="text-sm text-emerald-400 hover:text-emerald-300">
+      <Link href="/dashboard/reps" className="text-sm text-fuchsia-400 hover:text-fuchsia-300">
         ← Back to roster
       </Link>
 
@@ -331,7 +331,7 @@ export default function RepDetailPage() {
                     <TD>
                       <Link
                         href={`/dashboard/plans/${a.comp_plan_id}`}
-                        className="text-emerald-300 hover:text-emerald-200"
+                        className="text-fuchsia-300 hover:text-fuchsia-200"
                       >
                         {planName(a.comp_plan_id)}
                       </Link>
@@ -372,14 +372,14 @@ export default function RepDetailPage() {
             <input
               value={editForm.name}
               onChange={(e) => setEditForm((f) => ({ ...f, name: e.target.value }))}
-              className="w-full rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 focus:border-emerald-500 focus:outline-none"
+              className="w-full rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 focus:border-fuchsia-500 focus:outline-none"
             />
           </Field>
           <Field label="Email">
             <input
               value={editForm.email}
               onChange={(e) => setEditForm((f) => ({ ...f, email: e.target.value }))}
-              className="w-full rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 focus:border-emerald-500 focus:outline-none"
+              className="w-full rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 focus:border-fuchsia-500 focus:outline-none"
             />
           </Field>
           <div className="grid grid-cols-2 gap-4">
@@ -387,14 +387,14 @@ export default function RepDetailPage() {
               <input
                 value={editForm.role}
                 onChange={(e) => setEditForm((f) => ({ ...f, role: e.target.value }))}
-                className="w-full rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 focus:border-emerald-500 focus:outline-none"
+                className="w-full rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 focus:border-fuchsia-500 focus:outline-none"
               />
             </Field>
             <Field label="Territory">
               <input
                 value={editForm.territory}
                 onChange={(e) => setEditForm((f) => ({ ...f, territory: e.target.value }))}
-                className="w-full rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 focus:border-emerald-500 focus:outline-none"
+                className="w-full rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 focus:border-fuchsia-500 focus:outline-none"
               />
             </Field>
           </div>
@@ -402,7 +402,7 @@ export default function RepDetailPage() {
             <select
               value={editForm.status}
               onChange={(e) => setEditForm((f) => ({ ...f, status: e.target.value }))}
-              className="w-full rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 focus:border-emerald-500 focus:outline-none"
+              className="w-full rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 focus:border-fuchsia-500 focus:outline-none"
             >
               <option value="active">Active</option>
               <option value="inactive">Inactive</option>
@@ -439,7 +439,7 @@ export default function RepDetailPage() {
             <select
               value={assignForm.comp_plan_id}
               onChange={(e) => setAssignForm((f) => ({ ...f, comp_plan_id: e.target.value }))}
-              className="w-full rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 focus:border-emerald-500 focus:outline-none"
+              className="w-full rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 focus:border-fuchsia-500 focus:outline-none"
             >
               <option value="">Select a plan...</option>
               {plans.map((p) => (
@@ -453,7 +453,7 @@ export default function RepDetailPage() {
             <select
               value={assignForm.period_id}
               onChange={(e) => setAssignForm((f) => ({ ...f, period_id: e.target.value }))}
-              className="w-full rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 focus:border-emerald-500 focus:outline-none"
+              className="w-full rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 focus:border-fuchsia-500 focus:outline-none"
             >
               <option value="">Select a period...</option>
               {periods.map((p) => (
@@ -471,7 +471,7 @@ export default function RepDetailPage() {
               value={assignForm.quota}
               onChange={(e) => setAssignForm((f) => ({ ...f, quota: e.target.value }))}
               placeholder="250000"
-              className="w-full rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 focus:border-emerald-500 focus:outline-none"
+              className="w-full rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 focus:border-fuchsia-500 focus:outline-none"
             />
             <span className="mt-1 block text-xs text-slate-500">Stored in cents. One assignment per period.</span>
           </Field>

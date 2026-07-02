@@ -188,7 +188,7 @@ export default function PlansPage() {
           description={
             <>
               Create or select a workspace first, then return here to build comp plans.{' '}
-              <Link href="/dashboard/workspaces" className="text-emerald-400 hover:underline">
+              <Link href="/dashboard/workspaces" className="text-fuchsia-400 hover:underline">
                 Go to workspaces
               </Link>
             </>
@@ -215,7 +215,7 @@ export default function PlansPage() {
               value={search}
               onChange={(e) => setSearch(e.target.value)}
               placeholder="Search plans..."
-              className="w-full rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 placeholder-slate-500 focus:border-emerald-500 focus:outline-none"
+              className="w-full rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 placeholder-slate-500 focus:border-fuchsia-500 focus:outline-none"
             />
           </div>
           <span className="text-xs text-slate-500">
@@ -266,7 +266,7 @@ export default function PlansPage() {
                       <TD>
                         <Link
                           href={`/dashboard/plans/${plan.id}`}
-                          className="font-medium text-emerald-300 hover:underline"
+                          className="font-medium text-fuchsia-300 hover:underline"
                         >
                           {plan.name}
                         </Link>
@@ -438,7 +438,7 @@ function Header({ onCreate, disabled }: { onCreate: () => void; disabled?: boole
 }
 
 const inputCls =
-  'w-full rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 placeholder-slate-500 focus:border-emerald-500 focus:outline-none'
+  'w-full rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 placeholder-slate-500 focus:border-fuchsia-500 focus:outline-none'
 
 function Field({
   label,
@@ -452,7 +452,7 @@ function Field({
   return (
     <label className="block">
       <span className="mb-1 block text-xs font-medium uppercase tracking-wide text-slate-400">
-        {label} {required && <span className="text-emerald-400">*</span>}
+        {label} {required && <span className="text-fuchsia-400">*</span>}
       </span>
       {children}
     </label>

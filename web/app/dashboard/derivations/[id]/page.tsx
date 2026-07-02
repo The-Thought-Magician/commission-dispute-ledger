@@ -180,7 +180,7 @@ export default function DerivationDetailPage({ params }: { params: Promise<{ id:
       <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
         <div>
           <div className="flex items-center gap-2 text-xs text-slate-500">
-            <Link href="/dashboard/derivations" className="hover:text-emerald-400">
+            <Link href="/dashboard/derivations" className="hover:text-fuchsia-400">
               Derivations
             </Link>
             <span>/</span>
@@ -261,7 +261,7 @@ export default function DerivationDetailPage({ params }: { params: Promise<{ id:
                       <div className="h-2.5 w-full overflow-hidden rounded-full bg-slate-800">
                         <div
                           className={`h-full rounded-full ${
-                            r.amount < 0 ? 'bg-red-500/70' : 'bg-emerald-500/80'
+                            r.amount < 0 ? 'bg-red-500/70' : 'bg-fuchsia-500/80'
                           }`}
                           style={{ width: `${width}%` }}
                         />
@@ -281,12 +281,12 @@ export default function DerivationDetailPage({ params }: { params: Promise<{ id:
           value={search}
           onChange={(e) => setSearch(e.target.value)}
           placeholder="Search rep, deal, account, component..."
-          className="w-full rounded-lg border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-slate-200 placeholder:text-slate-500 focus:border-emerald-500 focus:outline-none sm:max-w-xs"
+          className="w-full rounded-lg border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-slate-200 placeholder:text-slate-500 focus:border-fuchsia-500 focus:outline-none sm:max-w-xs"
         />
         <select
           value={componentFilter}
           onChange={(e) => setComponentFilter(e.target.value)}
-          className="rounded-lg border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-slate-200 focus:border-emerald-500 focus:outline-none"
+          className="rounded-lg border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-slate-200 focus:border-fuchsia-500 focus:outline-none"
         >
           <option value="">All components</option>
           {components.map((c) => (
@@ -460,7 +460,7 @@ function ExplainView({ data }: { data: Record<string, any> }) {
                   )}
                 </div>
                 {value != null && (
-                  <div className="shrink-0 text-right text-sm tabular-nums text-emerald-300">
+                  <div className="shrink-0 text-right text-sm tabular-nums text-fuchsia-300">
                     {String(value)}
                   </div>
                 )}

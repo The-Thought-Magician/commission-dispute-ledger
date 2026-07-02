@@ -321,7 +321,7 @@ export default function ReportsPage() {
           <select
             value={workspaceId}
             onChange={(e) => onSwitchWorkspace(e.target.value)}
-            className="rounded-lg border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-slate-200 focus:border-emerald-500 focus:outline-none"
+            className="rounded-lg border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-slate-200 focus:border-fuchsia-500 focus:outline-none"
           >
             {workspaces.map((w) => (
               <option key={w.id} value={w.id}>
@@ -356,7 +356,7 @@ export default function ReportsPage() {
                 }}
                 className={`rounded-xl border px-4 py-3 text-left transition-colors ${
                   kind === d.kind
-                    ? 'border-emerald-500 bg-emerald-500/10'
+                    ? 'border-fuchsia-500 bg-fuchsia-500/10'
                     : 'border-slate-800 bg-slate-950 hover:border-slate-700'
                 }`}
               >
@@ -561,7 +561,7 @@ export default function ReportsPage() {
             value={auditSearch}
             onChange={(e) => setAuditSearch(e.target.value)}
             placeholder="Filter actor, entity, action..."
-            className="w-full max-w-xs rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 placeholder-slate-500 focus:border-emerald-500 focus:outline-none"
+            className="w-full max-w-xs rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 placeholder-slate-500 focus:border-fuchsia-500 focus:outline-none"
           />
         </CardHeader>
         <CardBody className="p-0">
@@ -637,9 +637,9 @@ export default function ReportsPage() {
 }
 
 const selectClass =
-  'w-full rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 focus:border-emerald-500 focus:outline-none'
+  'w-full rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 focus:border-fuchsia-500 focus:outline-none'
 const inputClass =
-  'w-full rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 placeholder-slate-500 focus:border-emerald-500 focus:outline-none'
+  'w-full rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 placeholder-slate-500 focus:border-fuchsia-500 focus:outline-none'
 
 function periodLabel(periods: Period[], id: string | null): string {
   if (!id) return 'No period'

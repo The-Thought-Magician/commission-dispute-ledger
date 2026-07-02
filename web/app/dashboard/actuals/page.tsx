@@ -266,12 +266,12 @@ export default function ActualsPage() {
           value={search}
           onChange={(e) => setSearch(e.target.value)}
           placeholder="Search by source label..."
-          className="w-full rounded-lg border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-slate-200 placeholder:text-slate-500 focus:border-emerald-500 focus:outline-none sm:max-w-xs"
+          className="w-full rounded-lg border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-slate-200 placeholder:text-slate-500 focus:border-fuchsia-500 focus:outline-none sm:max-w-xs"
         />
         <select
           value={periodFilter}
           onChange={(e) => setPeriodFilter(e.target.value)}
-          className="rounded-lg border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-slate-200 focus:border-emerald-500 focus:outline-none"
+          className="rounded-lg border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-slate-200 focus:border-fuchsia-500 focus:outline-none"
         >
           <option value="">All periods</option>
           {periods.map((p) => (
@@ -309,7 +309,7 @@ export default function ActualsPage() {
               <TR key={a.id}>
                 <TD>
                   <button
-                    className="font-medium text-emerald-300 hover:underline"
+                    className="font-medium text-fuchsia-300 hover:underline"
                     onClick={() => openDetail(a)}
                   >
                     {a.source_label ?? 'Untitled run'}
@@ -441,7 +441,7 @@ export default function ActualsPage() {
               <select
                 value={importPeriod}
                 onChange={(e) => setImportPeriod(e.target.value)}
-                className="w-full rounded-lg border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-slate-200 focus:border-emerald-500 focus:outline-none"
+                className="w-full rounded-lg border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-slate-200 focus:border-fuchsia-500 focus:outline-none"
               >
                 <option value="">Select period...</option>
                 {periods.map((p) => (
@@ -457,7 +457,7 @@ export default function ActualsPage() {
                 value={importLabel}
                 onChange={(e) => setImportLabel(e.target.value)}
                 placeholder="e.g. Payroll Q1 export"
-                className="w-full rounded-lg border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-slate-200 placeholder:text-slate-500 focus:border-emerald-500 focus:outline-none"
+                className="w-full rounded-lg border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-slate-200 placeholder:text-slate-500 focus:border-fuchsia-500 focus:outline-none"
               />
             </label>
           </div>
@@ -475,7 +475,7 @@ export default function ActualsPage() {
                   <select
                     value={l.rep_id}
                     onChange={(e) => updateLine(i, 'rep_id', e.target.value)}
-                    className="col-span-5 rounded-lg border border-slate-700 bg-slate-900 px-2 py-1.5 text-sm text-slate-200 focus:border-emerald-500 focus:outline-none"
+                    className="col-span-5 rounded-lg border border-slate-700 bg-slate-900 px-2 py-1.5 text-sm text-slate-200 focus:border-fuchsia-500 focus:outline-none"
                   >
                     <option value="">Rep (optional)</option>
                     {reps.map((r) => (
@@ -488,14 +488,14 @@ export default function ActualsPage() {
                     value={l.deal_id}
                     onChange={(e) => updateLine(i, 'deal_id', e.target.value)}
                     placeholder="Deal ID (optional)"
-                    className="col-span-4 rounded-lg border border-slate-700 bg-slate-900 px-2 py-1.5 text-sm text-slate-200 placeholder:text-slate-500 focus:border-emerald-500 focus:outline-none"
+                    className="col-span-4 rounded-lg border border-slate-700 bg-slate-900 px-2 py-1.5 text-sm text-slate-200 placeholder:text-slate-500 focus:border-fuchsia-500 focus:outline-none"
                   />
                   <input
                     value={l.amount}
                     onChange={(e) => updateLine(i, 'amount', e.target.value)}
                     placeholder="Amount $"
                     inputMode="decimal"
-                    className="col-span-2 rounded-lg border border-slate-700 bg-slate-900 px-2 py-1.5 text-right text-sm text-slate-200 placeholder:text-slate-500 focus:border-emerald-500 focus:outline-none"
+                    className="col-span-2 rounded-lg border border-slate-700 bg-slate-900 px-2 py-1.5 text-right text-sm text-slate-200 placeholder:text-slate-500 focus:border-fuchsia-500 focus:outline-none"
                   />
                   <button
                     onClick={() => removeLine(i)}

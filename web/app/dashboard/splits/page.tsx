@@ -157,7 +157,7 @@ export default function SplitsPage() {
             <select
               value={workspaceId}
               onChange={(e) => onSwitchWorkspace(e.target.value)}
-              className="rounded-lg border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-slate-200 focus:border-emerald-500 focus:outline-none"
+              className="rounded-lg border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-slate-200 focus:border-fuchsia-500 focus:outline-none"
             >
               {workspaces.map((w) => (
                 <option key={w.id} value={w.id}>
@@ -218,7 +218,7 @@ export default function SplitsPage() {
                       const seg = (n: number) => `${(n / computed.checked) * 100}%`
                       return (
                         <>
-                          <div className="bg-emerald-500" style={{ width: seg(balanced) }} title={`${balanced} balanced`} />
+                          <div className="bg-fuchsia-500" style={{ width: seg(balanced) }} title={`${balanced} balanced`} />
                           <div className="bg-red-500" style={{ width: seg(computed.over) }} title={`${computed.over} over`} />
                           <div className="bg-amber-500" style={{ width: seg(computed.under) }} title={`${computed.under} under`} />
                         </>
@@ -226,7 +226,7 @@ export default function SplitsPage() {
                     })()}
                   </div>
                   <div className="flex flex-wrap gap-4 text-xs text-slate-400">
-                    <LegendDot color="bg-emerald-500" label={`Balanced (${Math.max(computed.checked - computed.broken, 0)})`} />
+                    <LegendDot color="bg-fuchsia-500" label={`Balanced (${Math.max(computed.checked - computed.broken, 0)})`} />
                     <LegendDot color="bg-red-500" label={`Over-credited (${computed.over})`} />
                     <LegendDot color="bg-amber-500" label={`Under-credited (${computed.under})`} />
                   </div>
@@ -242,12 +242,12 @@ export default function SplitsPage() {
                   value={search}
                   onChange={(e) => setSearch(e.target.value)}
                   placeholder="Search deal or id..."
-                  className="w-full max-w-xs rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 placeholder-slate-500 focus:border-emerald-500 focus:outline-none"
+                  className="w-full max-w-xs rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 placeholder-slate-500 focus:border-fuchsia-500 focus:outline-none"
                 />
                 <select
                   value={filter}
                   onChange={(e) => setFilter(e.target.value as typeof filter)}
-                  className="rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 focus:border-emerald-500 focus:outline-none"
+                  className="rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 focus:border-fuchsia-500 focus:outline-none"
                 >
                   <option value="all">All deals</option>
                   <option value="broken">Broken only</option>
@@ -304,7 +304,7 @@ export default function SplitsPage() {
                               <div
                                 className={`h-2.5 rounded-full ${
                                   c.tone === 'success'
-                                    ? 'bg-emerald-500'
+                                    ? 'bg-fuchsia-500'
                                     : c.tone === 'danger'
                                       ? 'bg-red-500'
                                       : 'bg-amber-500'

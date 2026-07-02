@@ -254,7 +254,7 @@ export default function DealDetailPage() {
   if (error && !deal) {
     return (
       <div className="space-y-4">
-        <Link href="/dashboard/deals" className="text-sm text-emerald-400 hover:text-emerald-300">
+        <Link href="/dashboard/deals" className="text-sm text-fuchsia-400 hover:text-fuchsia-300">
           ← Back to Deals
         </Link>
         <div className="rounded-lg border border-red-500/30 bg-red-500/10 px-4 py-3 text-sm text-red-300">
@@ -267,7 +267,7 @@ export default function DealDetailPage() {
   if (!deal) {
     return (
       <div className="space-y-4">
-        <Link href="/dashboard/deals" className="text-sm text-emerald-400 hover:text-emerald-300">
+        <Link href="/dashboard/deals" className="text-sm text-fuchsia-400 hover:text-fuchsia-300">
           ← Back to Deals
         </Link>
         <EmptyState title="Deal not found" description="This deal may have been deleted." />
@@ -281,7 +281,7 @@ export default function DealDetailPage() {
     <div className="space-y-6">
       <div className="flex flex-wrap items-start justify-between gap-4">
         <div>
-          <Link href="/dashboard/deals" className="text-sm text-emerald-400 hover:text-emerald-300">
+          <Link href="/dashboard/deals" className="text-sm text-fuchsia-400 hover:text-fuchsia-300">
             ← Back to Deals
           </Link>
           <div className="mt-2 flex flex-wrap items-center gap-3">
@@ -359,7 +359,7 @@ export default function DealDetailPage() {
                     <TD className="font-medium text-white">
                       <Link
                         href={`/dashboard/reps/${c.rep_id}`}
-                        className="hover:text-emerald-300"
+                        className="hover:text-fuchsia-300"
                       >
                         {repName(c.rep_id)}
                       </Link>
@@ -387,11 +387,11 @@ export default function DealDetailPage() {
             <div className="mt-4">
               <div className="mb-1 flex items-center justify-between text-xs text-slate-400">
                 <span>Split coverage</span>
-                <span className={splitOk ? 'text-emerald-400' : 'text-red-400'}>{splitTotal}% / 100%</span>
+                <span className={splitOk ? 'text-fuchsia-400' : 'text-red-400'}>{splitTotal}% / 100%</span>
               </div>
               <div className="h-2 w-full overflow-hidden rounded-full bg-slate-800">
                 <div
-                  className={`h-full ${splitOk ? 'bg-emerald-500' : splitTotal > 100 ? 'bg-red-500' : 'bg-amber-500'}`}
+                  className={`h-full ${splitOk ? 'bg-fuchsia-500' : splitTotal > 100 ? 'bg-red-500' : 'bg-amber-500'}`}
                   style={{ width: `${Math.min(100, splitTotal)}%` }}
                 />
               </div>
@@ -425,7 +425,7 @@ export default function DealDetailPage() {
             <input
               value={form.account_name}
               onChange={(e) => setForm({ ...form, account_name: e.target.value })}
-              className="w-full rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 focus:border-emerald-500 focus:outline-none"
+              className="w-full rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 focus:border-fuchsia-500 focus:outline-none"
             />
           </Field>
           <div className="grid grid-cols-2 gap-3">
@@ -435,7 +435,7 @@ export default function DealDetailPage() {
                 step="0.01"
                 value={form.amount}
                 onChange={(e) => setForm({ ...form, amount: e.target.value })}
-                className="w-full rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 focus:border-emerald-500 focus:outline-none"
+                className="w-full rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 focus:border-fuchsia-500 focus:outline-none"
               />
             </Field>
             <Field label="Margin">
@@ -444,7 +444,7 @@ export default function DealDetailPage() {
                 step="0.01"
                 value={form.margin}
                 onChange={(e) => setForm({ ...form, margin: e.target.value })}
-                className="w-full rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 focus:border-emerald-500 focus:outline-none"
+                className="w-full rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 focus:border-fuchsia-500 focus:outline-none"
               />
             </Field>
           </div>
@@ -453,7 +453,7 @@ export default function DealDetailPage() {
               <input
                 value={form.product}
                 onChange={(e) => setForm({ ...form, product: e.target.value })}
-                className="w-full rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 focus:border-emerald-500 focus:outline-none"
+                className="w-full rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 focus:border-fuchsia-500 focus:outline-none"
               />
             </Field>
             <Field label="Close date">
@@ -461,7 +461,7 @@ export default function DealDetailPage() {
                 type="date"
                 value={form.close_date}
                 onChange={(e) => setForm({ ...form, close_date: e.target.value })}
-                className="w-full rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 focus:border-emerald-500 focus:outline-none"
+                className="w-full rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 focus:border-fuchsia-500 focus:outline-none"
               />
             </Field>
           </div>
@@ -470,7 +470,7 @@ export default function DealDetailPage() {
               <select
                 value={form.status}
                 onChange={(e) => setForm({ ...form, status: e.target.value })}
-                className="w-full rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 focus:border-emerald-500 focus:outline-none"
+                className="w-full rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 focus:border-fuchsia-500 focus:outline-none"
               >
                 {DEAL_STATUSES.map((s) => (
                   <option key={s} value={s}>
@@ -484,7 +484,7 @@ export default function DealDetailPage() {
                 value={form.currency}
                 onChange={(e) => setForm({ ...form, currency: e.target.value.toUpperCase() })}
                 maxLength={3}
-                className="w-full rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 focus:border-emerald-500 focus:outline-none"
+                className="w-full rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 focus:border-fuchsia-500 focus:outline-none"
               />
             </Field>
           </div>
@@ -493,7 +493,7 @@ export default function DealDetailPage() {
               value={form.external_id}
               onChange={(e) => setForm({ ...form, external_id: e.target.value })}
               placeholder="CRM opportunity id"
-              className="w-full rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 focus:border-emerald-500 focus:outline-none"
+              className="w-full rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 focus:border-fuchsia-500 focus:outline-none"
             />
           </Field>
         </form>
@@ -528,7 +528,7 @@ export default function DealDetailPage() {
                 <select
                   value={creditForm.rep_id}
                   onChange={(e) => setCreditForm({ ...creditForm, rep_id: e.target.value })}
-                  className="w-full rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 focus:border-emerald-500 focus:outline-none"
+                  className="w-full rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 focus:border-fuchsia-500 focus:outline-none"
                 >
                   {availableReps.map((r) => (
                     <option key={r.id} value={r.id}>
@@ -543,7 +543,7 @@ export default function DealDetailPage() {
                   <select
                     value={creditForm.role}
                     onChange={(e) => setCreditForm({ ...creditForm, role: e.target.value })}
-                    className="w-full rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 focus:border-emerald-500 focus:outline-none"
+                    className="w-full rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 focus:border-fuchsia-500 focus:outline-none"
                   >
                     {ROLES.map((r) => (
                       <option key={r} value={r}>
@@ -560,7 +560,7 @@ export default function DealDetailPage() {
                     max="100"
                     value={creditForm.split_pct}
                     onChange={(e) => setCreditForm({ ...creditForm, split_pct: e.target.value })}
-                    className="w-full rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 focus:border-emerald-500 focus:outline-none"
+                    className="w-full rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 focus:border-fuchsia-500 focus:outline-none"
                   />
                 </Field>
               </div>

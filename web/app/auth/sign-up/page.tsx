@@ -32,7 +32,7 @@ export default function SignUp() {
       <div className="w-full max-w-md">
         <div className="text-center mb-8">
           <Link href="/" className="text-2xl font-bold tracking-tight">
-            <span className="text-emerald-400">Commission</span>
+            <span className="text-fuchsia-400">Commission</span>
             <span className="text-white">DisputeLedger</span>
           </Link>
           <h1 className="text-2xl font-bold mt-4 text-white">Create your account</h1>
@@ -47,7 +47,7 @@ export default function SignUp() {
               name="name"
               type="text"
               required
-              className="w-full bg-slate-800 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-emerald-500"
+              className="w-full bg-slate-800 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-fuchsia-500"
               placeholder="Your name"
             />
           </div>
@@ -57,7 +57,7 @@ export default function SignUp() {
               name="email"
               type="email"
               required
-              className="w-full bg-slate-800 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-emerald-500"
+              className="w-full bg-slate-800 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-fuchsia-500"
               placeholder="you@example.com"
             />
           </div>
@@ -68,19 +68,19 @@ export default function SignUp() {
               type="password"
               required
               minLength={8}
-              className="w-full bg-slate-800 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-emerald-500"
+              className="w-full bg-slate-800 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-fuchsia-500"
             />
           </div>
           <button
             type="submit"
             disabled={loading}
-            className="w-full bg-emerald-600 hover:bg-emerald-500 disabled:opacity-50 text-white py-3 rounded-lg font-semibold transition-colors"
+            className="w-full bg-fuchsia-600 hover:bg-fuchsia-500 disabled:opacity-50 text-white py-3 rounded-lg font-semibold transition-colors"
           >
             {loading ? 'Creating account...' : 'Create Account'}
           </button>
           <p className="text-center text-slate-400 text-sm">
             Already have an account?{' '}
-            <Link href="/auth/sign-in" className="text-emerald-400 hover:text-emerald-300">
+            <Link href="/auth/sign-in" className="text-fuchsia-400 hover:text-fuchsia-300">
               Sign in
             </Link>
           </p>

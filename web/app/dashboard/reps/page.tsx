@@ -186,7 +186,7 @@ export default function RepsPage() {
             <select
               value={workspaceId}
               onChange={(e) => onSwitchWorkspace(e.target.value)}
-              className="rounded-lg border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-slate-200 focus:border-emerald-500 focus:outline-none"
+              className="rounded-lg border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-slate-200 focus:border-fuchsia-500 focus:outline-none"
             >
               {workspaces.map((w) => (
                 <option key={w.id} value={w.id}>
@@ -233,12 +233,12 @@ export default function RepsPage() {
                   value={search}
                   onChange={(e) => setSearch(e.target.value)}
                   placeholder="Search name, email, role, territory..."
-                  className="w-full max-w-xs rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 placeholder-slate-500 focus:border-emerald-500 focus:outline-none"
+                  className="w-full max-w-xs rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 placeholder-slate-500 focus:border-fuchsia-500 focus:outline-none"
                 />
                 <select
                   value={statusFilter}
                   onChange={(e) => setStatusFilter(e.target.value)}
-                  className="rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 focus:border-emerald-500 focus:outline-none"
+                  className="rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 focus:border-fuchsia-500 focus:outline-none"
                 >
                   <option value="all">All statuses</option>
                   <option value="active">Active</option>
@@ -282,7 +282,7 @@ export default function RepsPage() {
                         <TD>
                           <Link
                             href={`/dashboard/reps/${r.id}`}
-                            className="font-medium text-emerald-300 hover:text-emerald-200"
+                            className="font-medium text-fuchsia-300 hover:text-fuchsia-200"
                           >
                             {r.name}
                           </Link>
@@ -344,7 +344,7 @@ export default function RepsPage() {
             <input
               value={form.name}
               onChange={(e) => setForm((f) => ({ ...f, name: e.target.value }))}
-              className="w-full rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 focus:border-emerald-500 focus:outline-none"
+              className="w-full rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 focus:border-fuchsia-500 focus:outline-none"
               placeholder="Jordan Sales"
             />
           </Field>
@@ -352,7 +352,7 @@ export default function RepsPage() {
             <input
               value={form.email}
               onChange={(e) => setForm((f) => ({ ...f, email: e.target.value }))}
-              className="w-full rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 focus:border-emerald-500 focus:outline-none"
+              className="w-full rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 focus:border-fuchsia-500 focus:outline-none"
               placeholder="jordan@company.com"
             />
           </Field>
@@ -361,7 +361,7 @@ export default function RepsPage() {
               <input
                 value={form.role}
                 onChange={(e) => setForm((f) => ({ ...f, role: e.target.value }))}
-                className="w-full rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 focus:border-emerald-500 focus:outline-none"
+                className="w-full rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 focus:border-fuchsia-500 focus:outline-none"
                 placeholder="AE"
               />
             </Field>
@@ -369,7 +369,7 @@ export default function RepsPage() {
               <input
                 value={form.territory}
                 onChange={(e) => setForm((f) => ({ ...f, territory: e.target.value }))}
-                className="w-full rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 focus:border-emerald-500 focus:outline-none"
+                className="w-full rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 focus:border-fuchsia-500 focus:outline-none"
                 placeholder="West"
               />
             </Field>
@@ -378,7 +378,7 @@ export default function RepsPage() {
             <select
               value={form.status}
               onChange={(e) => setForm((f) => ({ ...f, status: e.target.value }))}
-              className="w-full rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 focus:border-emerald-500 focus:outline-none"
+              className="w-full rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 focus:border-fuchsia-500 focus:outline-none"
             >
               <option value="active">Active</option>
               <option value="inactive">Inactive</option>

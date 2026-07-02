@@ -313,7 +313,7 @@ export default function DealsPage() {
             <select
               value={workspaceId}
               onChange={(e) => onSwitchWorkspace(e.target.value)}
-              className="rounded-lg border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-slate-200 focus:border-emerald-500 focus:outline-none"
+              className="rounded-lg border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-slate-200 focus:border-fuchsia-500 focus:outline-none"
             >
               {workspaces.map((w) => (
                 <option key={w.id} value={w.id}>
@@ -372,12 +372,12 @@ export default function DealsPage() {
                   value={search}
                   onChange={(e) => setSearch(e.target.value)}
                   placeholder="Search account, product, external id..."
-                  className="w-full max-w-xs rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 placeholder-slate-500 focus:border-emerald-500 focus:outline-none"
+                  className="w-full max-w-xs rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 placeholder-slate-500 focus:border-fuchsia-500 focus:outline-none"
                 />
                 <select
                   value={statusFilter}
                   onChange={(e) => setStatusFilter(e.target.value)}
-                  className="rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 focus:border-emerald-500 focus:outline-none"
+                  className="rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 focus:border-fuchsia-500 focus:outline-none"
                 >
                   <option value="all">All statuses</option>
                   {statusOptions.map((s) => (
@@ -389,7 +389,7 @@ export default function DealsPage() {
                 <select
                   value={periodFilter}
                   onChange={(e) => setPeriodFilter(e.target.value)}
-                  className="rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 focus:border-emerald-500 focus:outline-none"
+                  className="rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 focus:border-fuchsia-500 focus:outline-none"
                 >
                   <option value="all">All periods</option>
                   {periods.map((p) => (
@@ -443,7 +443,7 @@ export default function DealsPage() {
                         <TD>
                           <Link
                             href={`/dashboard/deals/${d.id}`}
-                            className="font-medium text-emerald-300 hover:text-emerald-200"
+                            className="font-medium text-fuchsia-300 hover:text-fuchsia-200"
                           >
                             {d.account_name}
                           </Link>
@@ -511,7 +511,7 @@ export default function DealsPage() {
             <input
               value={form.account_name}
               onChange={(e) => setForm((f) => ({ ...f, account_name: e.target.value }))}
-              className="w-full rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 focus:border-emerald-500 focus:outline-none"
+              className="w-full rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 focus:border-fuchsia-500 focus:outline-none"
               placeholder="Acme Corp"
             />
           </Field>
@@ -522,7 +522,7 @@ export default function DealsPage() {
                 min="0"
                 value={form.amount}
                 onChange={(e) => setForm((f) => ({ ...f, amount: e.target.value }))}
-                className="w-full rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 focus:border-emerald-500 focus:outline-none"
+                className="w-full rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 focus:border-fuchsia-500 focus:outline-none"
                 placeholder="50000"
               />
             </Field>
@@ -531,7 +531,7 @@ export default function DealsPage() {
                 type="number"
                 value={form.margin}
                 onChange={(e) => setForm((f) => ({ ...f, margin: e.target.value }))}
-                className="w-full rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 focus:border-emerald-500 focus:outline-none"
+                className="w-full rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 focus:border-fuchsia-500 focus:outline-none"
                 placeholder="20000"
               />
             </Field>
@@ -541,7 +541,7 @@ export default function DealsPage() {
               <input
                 value={form.product}
                 onChange={(e) => setForm((f) => ({ ...f, product: e.target.value }))}
-                className="w-full rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 focus:border-emerald-500 focus:outline-none"
+                className="w-full rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 focus:border-fuchsia-500 focus:outline-none"
                 placeholder="Platform"
               />
             </Field>
@@ -550,7 +550,7 @@ export default function DealsPage() {
                 type="date"
                 value={form.close_date}
                 onChange={(e) => setForm((f) => ({ ...f, close_date: e.target.value }))}
-                className="w-full rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 focus:border-emerald-500 focus:outline-none"
+                className="w-full rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 focus:border-fuchsia-500 focus:outline-none"
               />
             </Field>
           </div>
@@ -559,7 +559,7 @@ export default function DealsPage() {
               <select
                 value={form.status}
                 onChange={(e) => setForm((f) => ({ ...f, status: e.target.value }))}
-                className="w-full rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 focus:border-emerald-500 focus:outline-none"
+                className="w-full rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 focus:border-fuchsia-500 focus:outline-none"
               >
                 <option value="closed_won">closed_won</option>
                 <option value="open">open</option>
@@ -571,7 +571,7 @@ export default function DealsPage() {
               <select
                 value={form.period_id}
                 onChange={(e) => setForm((f) => ({ ...f, period_id: e.target.value }))}
-                className="w-full rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 focus:border-emerald-500 focus:outline-none"
+                className="w-full rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 focus:border-fuchsia-500 focus:outline-none"
               >
                 <option value="">No period</option>
                 {periods.map((p) => (
@@ -586,7 +586,7 @@ export default function DealsPage() {
             <input
               value={form.external_id}
               onChange={(e) => setForm((f) => ({ ...f, external_id: e.target.value }))}
-              className="w-full rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 focus:border-emerald-500 focus:outline-none"
+              className="w-full rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 focus:border-fuchsia-500 focus:outline-none"
               placeholder="CRM-1234"
             />
           </Field>
@@ -612,7 +612,7 @@ export default function DealsPage() {
         <div className="space-y-4">
           <p className="text-sm text-slate-400">
             Paste CSV rows. Columns:{' '}
-            <code className="rounded bg-slate-800 px-1.5 py-0.5 text-xs text-emerald-300">
+            <code className="rounded bg-slate-800 px-1.5 py-0.5 text-xs text-fuchsia-300">
               account_name, amount, margin, product, close_date, status, external_id
             </code>
             . A header row is auto-detected. Amount/margin are in dollars.
@@ -621,7 +621,7 @@ export default function DealsPage() {
             <select
               value={importPeriod}
               onChange={(e) => setImportPeriod(e.target.value)}
-              className="w-full rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 focus:border-emerald-500 focus:outline-none"
+              className="w-full rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 focus:border-fuchsia-500 focus:outline-none"
             >
               <option value="">No period</option>
               {periods.map((p) => (
@@ -636,7 +636,7 @@ export default function DealsPage() {
               value={importText}
               onChange={(e) => setImportText(e.target.value)}
               rows={8}
-              className="w-full rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 font-mono text-xs text-slate-200 focus:border-emerald-500 focus:outline-none"
+              className="w-full rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 font-mono text-xs text-slate-200 focus:border-fuchsia-500 focus:outline-none"
               placeholder={'account_name,amount,margin,product,close_date,status,external_id\nAcme Corp,50000,20000,Platform,2026-03-15,closed_won,CRM-1\nGlobex,120000,55000,Enterprise,2026-03-20,closed_won,CRM-2'}
             />
           </Field>
@@ -646,7 +646,7 @@ export default function DealsPage() {
             </div>
           )}
           {importResult && (
-            <div className="rounded-lg border border-emerald-500/30 bg-emerald-500/10 px-3 py-2 text-sm text-emerald-300">
+            <div className="rounded-lg border border-fuchsia-500/30 bg-fuchsia-500/10 px-3 py-2 text-sm text-fuchsia-300">
               {importResult}
             </div>
           )}

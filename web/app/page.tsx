@@ -3,39 +3,39 @@ import Link from 'next/link'
 const features = [
   {
     title: 'Independent re-derivation engine',
-    body: 'Recompute, from raw closed-won deals and a versioned comp-plan model, exactly what every rep should have been paid — deterministic, reproducible, fully decomposed.',
+    body: 'We recompute what every rep should have been paid, straight from raw closed-won deals and your versioned comp plan. Deterministic. Reproducible. No trust required.',
   },
   {
     title: 'Line-by-line reconciliation',
-    body: 'Compare expected vs. actually-paid at every level. Each delta is classified overpaid, underpaid, matched, or unexplained, with a tolerance threshold to silence noise.',
+    body: 'Expected vs. actually-paid, at every line. Overpaid, underpaid, matched, or unexplained. Set a tolerance and stop drowning in rounding noise.',
   },
   {
     title: 'Dispute case manager',
-    body: 'Turn any discrepancy into a tracked case: the claim, the disputed deals, the snapshot calculation, the comment thread, and the resolution as a permanent audit record.',
+    body: 'Every discrepancy becomes a case. Claim, disputed deals, snapshot calculation, comment thread, resolution. One record, permanently.',
   },
   {
     title: 'Versioned comp-plan modeler',
-    body: 'Encode base rates, tiers, accelerators, caps, and split rules as immutable versioned data. Every re-derivation pins to a version, so the math is always traceable.',
+    body: 'Base rates, tiers, accelerators, caps, splits — locked as immutable versioned data. Every re-derivation pins to a version. The math never drifts.',
   },
   {
     title: 'Split-credit reconciliation',
-    body: 'Multi-rep deals are where the money hides. Flag every deal whose split credit does not sum to 100% and roll up split integrity across the period.',
+    body: 'Multi-rep deals are where the money hides. We flag every split that does not sum to 100% and roll up split integrity for the whole period.',
   },
   {
     title: 'Cost-of-error report',
-    body: 'Quantify the impact: recoverable overpayment, underpayment exposure, error rate, and trend over periods — the headline ROI number for RevOps and finance.',
+    body: 'Recoverable overpayment. Underpayment exposure. Error rate. Trend by period. This is the number finance actually wants.',
   },
   {
     title: 'Clawback & adjustment tracker',
-    body: 'When a deal refunds or an account churns, track the clawback and any manual adjustment, linked straight to the dispute resolution that justified it.',
+    body: 'A deal refunds, an account churns — the clawback gets tracked and linked straight to the dispute that justified it. No orphaned adjustments.',
   },
   {
     title: 'Audit trail & calculation explainer',
-    body: 'Every write is logged with before/after. Every payout line expands into the exact rule, rate, tier, accelerator, cap, and split that produced it.',
+    body: 'Every write is logged, before and after. Every payout line expands into the exact rule, rate, tier, accelerator, cap, and split behind it.',
   },
   {
     title: 'One-click sample data',
-    body: 'Seed a complete demo workspace with an intentionally flawed commission run, so the reconciliation lights up immediately with zero setup.',
+    body: 'Seed a demo workspace with a broken commission run in one click. See the reconciliation light up before you touch real data.',
   },
 ]
 
@@ -44,7 +44,7 @@ export default function Home() {
     <main className="min-h-screen bg-slate-950 text-white">
       <nav className="border-b border-slate-800 px-6 py-4 flex items-center justify-between">
         <span className="text-xl font-bold tracking-tight">
-          <span className="text-emerald-400">Commission</span>
+          <span className="text-fuchsia-400">Commission</span>
           <span className="text-white">DisputeLedger</span>
         </span>
         <div className="flex items-center gap-3 sm:gap-4">
@@ -56,7 +56,7 @@ export default function Home() {
           </Link>
           <Link
             href="/auth/sign-up"
-            className="rounded-lg bg-emerald-600 px-4 py-2 text-sm font-medium text-white hover:bg-emerald-500"
+            className="rounded-lg bg-fuchsia-600 px-4 py-2 text-sm font-medium text-white hover:bg-fuchsia-500"
           >
             Get Started
           </Link>
@@ -65,23 +65,23 @@ export default function Home() {
 
       {/* Hero */}
       <section className="mx-auto max-w-5xl px-6 py-24 text-center">
-        <span className="inline-flex items-center rounded-full border border-emerald-500/30 bg-emerald-500/10 px-3 py-1 text-xs font-medium text-emerald-300">
-          The second opinion for variable comp
+        <span className="inline-flex items-center rounded-full border border-fuchsia-500/30 bg-fuchsia-500/10 px-3 py-1 text-xs font-medium text-fuchsia-300">
+          Stop losing commission disputes to slow evidence
         </span>
         <h1 className="mt-6 text-4xl font-bold leading-tight tracking-tight sm:text-6xl">
-          Audit every commission check
+          Audit the check
           <br />
-          <span className="text-emerald-400">before the rep does.</span>
+          <span className="text-fuchsia-400">before the rep disputes it.</span>
         </h1>
         <p className="mx-auto mt-6 max-w-2xl text-lg text-slate-400">
-          CommissionDisputeLedger re-derives what every rep should have been paid from raw deals and a versioned
-          comp plan, reconciles it line-by-line against what the commission tool actually paid, and turns every
-          discrepancy into a tracked, auditable dispute.
+          We re-derive what every rep should have been paid from raw deals and your versioned comp plan.
+          We reconcile it line-by-line against what actually got paid. Every gap becomes a tracked, auditable
+          dispute. No spreadsheet archaeology.
         </p>
         <div className="mt-10 flex flex-col items-center justify-center gap-3 sm:flex-row">
           <Link
             href="/auth/sign-up"
-            className="rounded-lg bg-emerald-600 px-6 py-3 text-base font-semibold text-white hover:bg-emerald-500"
+            className="rounded-lg bg-fuchsia-600 px-6 py-3 text-base font-semibold text-white hover:bg-fuchsia-500"
           >
             Start auditing free
           </Link>
@@ -98,20 +98,20 @@ export default function Home() {
       {/* Problem */}
       <section className="border-t border-slate-800 bg-slate-900/30 px-6 py-20">
         <div className="mx-auto max-w-5xl">
-          <h2 className="text-center text-2xl font-bold sm:text-3xl">Comp disputes recur every pay period</h2>
+          <h2 className="text-center text-2xl font-bold sm:text-3xl">Every pay period, the same fight</h2>
           <p className="mx-auto mt-4 max-w-2xl text-center text-slate-400">
-            When a rep believes their check is wrong, RevOps cannot just trust the tool that produced it. Today the
-            rebuild happens in throwaway spreadsheets. We make that shadow ledger systematic.
+            A rep flags a wrong check. RevOps cannot just trust the tool that produced it. Right now that rebuild
+            happens in a throwaway spreadsheet, once, under deadline. We make it systematic instead.
           </p>
           <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {[
-              { h: 'Overpayments leak cash', p: 'Miscoded deals and missed clawbacks quietly overpay reps month after month. Nobody reconciles backward.' },
-              { h: 'Underpayments drive attrition', p: 'A rep shorted on an accelerator or tier crossover loses trust fast — and starts interviewing.' },
-              { h: 'Disputes have no audit trail', p: '"Trust me, I recalculated it" does not survive a SOX audit, a finance review, or an angry rep.' },
-              { h: 'Splits never reconcile to 100%', p: 'Multi-rep splits that sum to 95% or 110% are invisible until someone re-derives them.' },
+              { h: 'Overpayments leak cash', p: 'Miscoded deals and missed clawbacks overpay reps, month after month. Nobody reconciles backward until it is too late.' },
+              { h: 'Underpayments drive attrition', p: 'Shorted on an accelerator once, a rep starts interviewing. Trust does not come back after a bad check.' },
+              { h: 'Disputes have no audit trail', p: '"Trust me, I recalculated it" does not survive a SOX audit, a finance review, or an angry rep with a spreadsheet.' },
+              { h: 'Splits never reconcile to 100%', p: 'Multi-rep splits landing at 95% or 110% stay invisible until someone re-derives them by hand.' },
             ].map((x) => (
               <div key={x.h} className="rounded-xl border border-slate-800 bg-slate-950/60 p-5">
-                <h3 className="text-sm font-semibold text-emerald-300">{x.h}</h3>
+                <h3 className="text-sm font-semibold text-fuchsia-300">{x.h}</h3>
                 <p className="mt-2 text-sm text-slate-400">{x.p}</p>
               </div>
             ))}
@@ -122,9 +122,9 @@ export default function Home() {
       {/* Feature grid */}
       <section className="px-6 py-20">
         <div className="mx-auto max-w-5xl">
-          <h2 className="text-center text-2xl font-bold sm:text-3xl">A complete audit & reconciliation layer</h2>
+          <h2 className="text-center text-2xl font-bold sm:text-3xl">A full audit and reconciliation layer</h2>
           <p className="mx-auto mt-4 max-w-2xl text-center text-slate-400">
-            Not a comp calculator — the adversarial checker that sits next to it and grades its output.
+            Not a comp calculator. The checker that sits next to it and grades its output, every period.
           </p>
           <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {features.map((f) => (
@@ -140,14 +140,14 @@ export default function Home() {
       {/* CTA */}
       <section className="border-t border-slate-800 bg-slate-900/30 px-6 py-20">
         <div className="mx-auto max-w-3xl text-center">
-          <h2 className="text-2xl font-bold sm:text-3xl">Recover overpayments. Defend every number.</h2>
+          <h2 className="text-2xl font-bold sm:text-3xl">Recover the overpayments. Defend every number.</h2>
           <p className="mt-4 text-slate-400">
-            Spin up a demo workspace in one click and watch the reconciliation light up.
+            Spin up a demo workspace in one click. Watch the reconciliation light up. See the gaps before payday.
           </p>
           <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
             <Link
               href="/auth/sign-up"
-              className="rounded-lg bg-emerald-600 px-6 py-3 text-base font-semibold text-white hover:bg-emerald-500"
+              className="rounded-lg bg-fuchsia-600 px-6 py-3 text-base font-semibold text-white hover:bg-fuchsia-500"
             >
               Get Started
             </Link>

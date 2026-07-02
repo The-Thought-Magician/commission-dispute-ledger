@@ -37,7 +37,7 @@ type CompareResult = {
 }
 
 const inputCls =
-  'rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 focus:border-emerald-500 focus:outline-none'
+  'rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 focus:border-fuchsia-500 focus:outline-none'
 
 function num(v: unknown): number {
   const n = typeof v === 'string' ? parseFloat(v) : (v as number)
@@ -147,7 +147,7 @@ export default function ComparePlanVersionsPage({ params }: { params: Promise<{ 
   return (
     <div className="space-y-6">
       <div>
-        <Link href={`/dashboard/plans/${id}`} className="text-sm text-emerald-400 hover:underline">
+        <Link href={`/dashboard/plans/${id}`} className="text-sm text-fuchsia-400 hover:underline">
           ← Back to plan
         </Link>
       </div>
@@ -170,7 +170,7 @@ export default function ComparePlanVersionsPage({ params }: { params: Promise<{ 
             <>
               This plan has {versions.length} version{versions.length === 1 ? '' : 's'}. Create at least
               two versions on the{' '}
-              <Link href={`/dashboard/plans/${id}`} className="text-emerald-400 hover:underline">
+              <Link href={`/dashboard/plans/${id}`} className="text-fuchsia-400 hover:underline">
                 plan detail page
               </Link>{' '}
               to compare them.
@@ -268,7 +268,7 @@ export default function ComparePlanVersionsPage({ params }: { params: Promise<{ 
                             <TR key={d.field ?? i}>
                               <TD className="font-medium text-slate-100">{d.field ?? `field ${i + 1}`}</TD>
                               <TD className={changed ? 'text-red-300' : 'text-slate-400'}>{aVal}</TD>
-                              <TD className={changed ? 'text-emerald-300' : 'text-slate-400'}>{bVal}</TD>
+                              <TD className={changed ? 'text-fuchsia-300' : 'text-slate-400'}>{bVal}</TD>
                               <TD>
                                 {d.change ? (
                                   <Badge tone={badgeTone(d.change)}>{d.change}</Badge>
@@ -314,8 +314,8 @@ function VersionCard({
 }) {
   const entries = data ? Object.entries(data) : []
   return (
-    <Card className={accent ? 'border-emerald-500/30' : ''}>
-      <CardHeader className={accent ? 'border-emerald-500/20' : ''}>
+    <Card className={accent ? 'border-fuchsia-500/30' : ''}>
+      <CardHeader className={accent ? 'border-fuchsia-500/20' : ''}>
         <h3 className="text-sm font-semibold text-white">{title}</h3>
       </CardHeader>
       <CardBody>

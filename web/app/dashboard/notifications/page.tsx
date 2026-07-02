@@ -176,7 +176,7 @@ export default function NotificationsPage() {
               value={search}
               onChange={(e) => setSearch(e.target.value)}
               placeholder="Search notifications..."
-              className="w-full max-w-xs rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 placeholder-slate-500 focus:border-emerald-500 focus:outline-none"
+              className="w-full max-w-xs rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 placeholder-slate-500 focus:border-fuchsia-500 focus:outline-none"
             />
             <div className="inline-flex overflow-hidden rounded-lg border border-slate-700">
               {(['all', 'unread', 'read'] as const).map((f) => (
@@ -185,7 +185,7 @@ export default function NotificationsPage() {
                   onClick={() => setFilter(f)}
                   className={`px-3 py-2 text-sm capitalize transition-colors ${
                     filter === f
-                      ? 'bg-emerald-600 text-white'
+                      ? 'bg-fuchsia-600 text-white'
                       : 'bg-slate-950 text-slate-300 hover:bg-slate-800'
                   }`}
                 >
@@ -197,7 +197,7 @@ export default function NotificationsPage() {
               <select
                 value={kindFilter}
                 onChange={(e) => setKindFilter(e.target.value)}
-                className="rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 focus:border-emerald-500 focus:outline-none"
+                className="rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 focus:border-fuchsia-500 focus:outline-none"
               >
                 <option value="all">All kinds</option>
                 {kinds.map((k) => (
@@ -231,13 +231,13 @@ export default function NotificationsPage() {
                 <li
                   key={n.id}
                   className={`flex items-start gap-4 px-5 py-4 ${
-                    n.read ? '' : 'bg-emerald-500/5'
+                    n.read ? '' : 'bg-fuchsia-500/5'
                   }`}
                 >
                   <div className="mt-1.5">
                     <span
                       className={`block h-2 w-2 rounded-full ${
-                        n.read ? 'bg-slate-700' : 'bg-emerald-400'
+                        n.read ? 'bg-slate-700' : 'bg-fuchsia-400'
                       }`}
                       aria-hidden
                     />

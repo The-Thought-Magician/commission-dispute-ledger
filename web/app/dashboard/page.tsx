@@ -246,7 +246,7 @@ export default function DashboardHome() {
           <h1 className="text-2xl font-bold text-white">Dashboard</h1>
           <p className="mt-1 text-sm text-slate-400">
             Commission audit overview for{' '}
-            <span className="text-emerald-300">{activeWorkspace?.name ?? 'workspace'}</span>
+            <span className="text-fuchsia-300">{activeWorkspace?.name ?? 'workspace'}</span>
           </p>
         </div>
         <div className="flex items-center gap-2">
@@ -254,7 +254,7 @@ export default function DashboardHome() {
           <select
             value={activeId ?? ''}
             onChange={(e) => switchWorkspace(e.target.value)}
-            className="rounded-lg border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-slate-200 focus:outline-none focus:ring-2 focus:ring-emerald-500/40"
+            className="rounded-lg border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-slate-200 focus:outline-none focus:ring-2 focus:ring-fuchsia-500/40"
           >
             {workspaces.map((w) => (
               <option key={w.id} value={w.id}>
@@ -301,7 +301,7 @@ export default function DashboardHome() {
               <h2 className="text-sm font-semibold text-white">Error-rate trend</h2>
               <p className="text-xs text-slate-500">Across periods (latest on the right)</p>
             </div>
-            <Link href="/dashboard/cost-of-error" className="text-xs text-emerald-400 hover:text-emerald-300">
+            <Link href="/dashboard/cost-of-error" className="text-xs text-fuchsia-400 hover:text-fuchsia-300">
               Cost of error →
             </Link>
           </CardHeader>
@@ -380,7 +380,7 @@ export default function DashboardHome() {
                       </div>
                       <div className="h-2 w-full overflow-hidden rounded-full bg-slate-800">
                         <div
-                          className="h-full rounded-full bg-emerald-500/70"
+                          className="h-full rounded-full bg-fuchsia-500/70"
                           style={{ width: `${(Math.abs(b.amount_cents) / maxAmt) * 100}%` }}
                         />
                       </div>
@@ -402,7 +402,7 @@ export default function DashboardHome() {
             <h2 className="text-sm font-semibold text-white">Recent activity</h2>
             <p className="text-xs text-slate-500">Latest events in this workspace</p>
           </div>
-          <Link href="/dashboard/reports" className="text-xs text-emerald-400 hover:text-emerald-300">
+          <Link href="/dashboard/reports" className="text-xs text-fuchsia-400 hover:text-fuchsia-300">
             Audit log →
           </Link>
         </CardHeader>
@@ -456,7 +456,7 @@ export default function DashboardHome() {
           <Link
             key={l.href}
             href={l.href}
-            className="rounded-xl border border-slate-800 bg-slate-900/60 px-4 py-3 text-sm text-slate-300 transition-colors hover:border-emerald-500/40 hover:text-white"
+            className="rounded-xl border border-slate-800 bg-slate-900/60 px-4 py-3 text-sm text-slate-300 transition-colors hover:border-fuchsia-500/40 hover:text-white"
           >
             {l.label} →
           </Link>

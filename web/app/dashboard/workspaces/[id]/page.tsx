@@ -200,7 +200,7 @@ export default function WorkspaceDetailPage() {
   if (error && !workspace) {
     return (
       <div className="space-y-6">
-        <Link href="/dashboard/workspaces" className="text-sm text-emerald-400 hover:text-emerald-300">
+        <Link href="/dashboard/workspaces" className="text-sm text-fuchsia-400 hover:text-fuchsia-300">
           ← Workspaces
         </Link>
         <Card>
@@ -236,7 +236,7 @@ export default function WorkspaceDetailPage() {
     <div className="space-y-6">
       <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
         <div>
-          <Link href="/dashboard/workspaces" className="text-sm text-emerald-400 hover:text-emerald-300">
+          <Link href="/dashboard/workspaces" className="text-sm text-fuchsia-400 hover:text-fuchsia-300">
             ← Workspaces
           </Link>
           <div className="mt-2 flex items-center gap-3">
@@ -278,7 +278,7 @@ export default function WorkspaceDetailPage() {
             </div>
           )}
           {saveMsg && (
-            <div className="rounded-lg border border-emerald-500/30 bg-emerald-500/10 px-3 py-2 text-sm text-emerald-300">
+            <div className="rounded-lg border border-fuchsia-500/30 bg-fuchsia-500/10 px-3 py-2 text-sm text-fuchsia-300">
               {saveMsg}
             </div>
           )}
@@ -288,7 +288,7 @@ export default function WorkspaceDetailPage() {
               <input
                 value={name}
                 onChange={(e) => setName(e.target.value)}
-                className="w-full rounded-lg border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-slate-200 focus:outline-none focus:ring-2 focus:ring-emerald-500/40"
+                className="w-full rounded-lg border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-slate-200 focus:outline-none focus:ring-2 focus:ring-fuchsia-500/40"
               />
             </div>
             <div>
@@ -296,7 +296,7 @@ export default function WorkspaceDetailPage() {
               <select
                 value={currency}
                 onChange={(e) => setCurrency(e.target.value)}
-                className="w-full rounded-lg border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-slate-200 focus:outline-none focus:ring-2 focus:ring-emerald-500/40"
+                className="w-full rounded-lg border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-slate-200 focus:outline-none focus:ring-2 focus:ring-fuchsia-500/40"
               >
                 {CURRENCIES.map((c) => (
                   <option key={c} value={c}>
@@ -310,7 +310,7 @@ export default function WorkspaceDetailPage() {
               <select
                 value={fiscalStart}
                 onChange={(e) => setFiscalStart(parseInt(e.target.value, 10))}
-                className="w-full rounded-lg border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-slate-200 focus:outline-none focus:ring-2 focus:ring-emerald-500/40"
+                className="w-full rounded-lg border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-slate-200 focus:outline-none focus:ring-2 focus:ring-fuchsia-500/40"
               >
                 {MONTHS.map((m, i) => (
                   <option key={m} value={i + 1}>
@@ -324,7 +324,7 @@ export default function WorkspaceDetailPage() {
               <select
                 value={rounding}
                 onChange={(e) => setRounding(e.target.value)}
-                className="w-full rounded-lg border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-slate-200 focus:outline-none focus:ring-2 focus:ring-emerald-500/40"
+                className="w-full rounded-lg border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-slate-200 focus:outline-none focus:ring-2 focus:ring-fuchsia-500/40"
               >
                 {ROUNDING.map((r) => (
                   <option key={r} value={r}>
@@ -342,7 +342,7 @@ export default function WorkspaceDetailPage() {
                 min={0}
                 value={tolerance}
                 onChange={(e) => setTolerance(e.target.value)}
-                className="w-full rounded-lg border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-slate-200 focus:outline-none focus:ring-2 focus:ring-emerald-500/40"
+                className="w-full rounded-lg border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-slate-200 focus:outline-none focus:ring-2 focus:ring-fuchsia-500/40"
               />
             </div>
           </div>
@@ -462,7 +462,7 @@ export default function WorkspaceDetailPage() {
               value={inviteUser}
               onChange={(e) => setInviteUser(e.target.value)}
               placeholder="user_…"
-              className="w-full rounded-lg border border-slate-700 bg-slate-900 px-3 py-2 font-mono text-sm text-slate-200 placeholder:text-slate-600 focus:outline-none focus:ring-2 focus:ring-emerald-500/40"
+              className="w-full rounded-lg border border-slate-700 bg-slate-900 px-3 py-2 font-mono text-sm text-slate-200 placeholder:text-slate-600 focus:outline-none focus:ring-2 focus:ring-fuchsia-500/40"
             />
           </div>
           <div>
@@ -470,7 +470,7 @@ export default function WorkspaceDetailPage() {
             <select
               value={inviteRole}
               onChange={(e) => setInviteRole(e.target.value)}
-              className="w-full rounded-lg border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-slate-200 focus:outline-none focus:ring-2 focus:ring-emerald-500/40"
+              className="w-full rounded-lg border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-slate-200 focus:outline-none focus:ring-2 focus:ring-fuchsia-500/40"
             >
               {ROLES.map((r) => (
                 <option key={r} value={r}>

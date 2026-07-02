@@ -296,7 +296,7 @@ export default function DisputeDetailPage() {
   if (error) {
     return (
       <div className="space-y-4">
-        <Link href="/dashboard/disputes" className="text-sm text-emerald-400 hover:text-emerald-300">
+        <Link href="/dashboard/disputes" className="text-sm text-fuchsia-400 hover:text-fuchsia-300">
           ← Back to disputes
         </Link>
         <EmptyState
@@ -311,7 +311,7 @@ export default function DisputeDetailPage() {
   if (!dispute) {
     return (
       <div className="space-y-4">
-        <Link href="/dashboard/disputes" className="text-sm text-emerald-400 hover:text-emerald-300">
+        <Link href="/dashboard/disputes" className="text-sm text-fuchsia-400 hover:text-fuchsia-300">
           ← Back to disputes
         </Link>
         <EmptyState title="Dispute not found" />
@@ -329,7 +329,7 @@ export default function DisputeDetailPage() {
     <div className="space-y-6">
       <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
         <div>
-          <Link href="/dashboard/disputes" className="text-sm text-emerald-400 hover:text-emerald-300">
+          <Link href="/dashboard/disputes" className="text-sm text-fuchsia-400 hover:text-fuchsia-300">
             ← Back to disputes
           </Link>
           <h1 className="mt-2 flex items-center gap-3 text-2xl font-bold text-white">
@@ -467,7 +467,7 @@ export default function DisputeDetailPage() {
                   onChange={(e) => setCommentBody(e.target.value)}
                   rows={2}
                   placeholder="Add a comment…"
-                  className="w-full rounded-lg border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-slate-200 placeholder:text-slate-600 focus:border-emerald-500 focus:outline-none"
+                  className="w-full rounded-lg border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-slate-200 placeholder:text-slate-600 focus:border-fuchsia-500 focus:outline-none"
                 />
                 <div className="flex justify-end">
                   <Button type="submit" disabled={postingComment || !commentBody.trim()}>
@@ -482,7 +482,7 @@ export default function DisputeDetailPage() {
                   {comments.map((c) => (
                     <li key={c.id} className="rounded-lg border border-slate-800 bg-slate-900/50 px-4 py-3">
                       <div className="flex items-center justify-between">
-                        <span className="text-sm font-medium text-emerald-300">{c.author || 'Unknown'}</span>
+                        <span className="text-sm font-medium text-fuchsia-300">{c.author || 'Unknown'}</span>
                         <span className="text-xs text-slate-500">
                           {c.created_at ? new Date(c.created_at).toLocaleString() : ''}
                         </span>
@@ -510,7 +510,7 @@ export default function DisputeDetailPage() {
                 <select
                   value={edit.status}
                   onChange={(e) => setEdit((s) => ({ ...s, status: e.target.value }))}
-                  className="w-full rounded-lg border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-slate-200 focus:border-emerald-500 focus:outline-none"
+                  className="w-full rounded-lg border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-slate-200 focus:border-fuchsia-500 focus:outline-none"
                 >
                   {STATUS_OPTIONS.map((s) => (
                     <option key={s} value={s}>
@@ -527,7 +527,7 @@ export default function DisputeDetailPage() {
                   value={edit.assignee}
                   onChange={(e) => setEdit((s) => ({ ...s, assignee: e.target.value }))}
                   placeholder="user id / email"
-                  className="w-full rounded-lg border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-slate-200 placeholder:text-slate-600 focus:border-emerald-500 focus:outline-none"
+                  className="w-full rounded-lg border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-slate-200 placeholder:text-slate-600 focus:border-fuchsia-500 focus:outline-none"
                 />
               </div>
               <div>
@@ -538,7 +538,7 @@ export default function DisputeDetailPage() {
                   type="date"
                   value={edit.due_date}
                   onChange={(e) => setEdit((s) => ({ ...s, due_date: e.target.value }))}
-                  className="w-full rounded-lg border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-slate-200 focus:border-emerald-500 focus:outline-none"
+                  className="w-full rounded-lg border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-slate-200 focus:border-fuchsia-500 focus:outline-none"
                 />
               </div>
               <div>
@@ -549,7 +549,7 @@ export default function DisputeDetailPage() {
                   value={edit.narrative}
                   onChange={(e) => setEdit((s) => ({ ...s, narrative: e.target.value }))}
                   rows={4}
-                  className="w-full rounded-lg border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-slate-200 focus:border-emerald-500 focus:outline-none"
+                  className="w-full rounded-lg border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-slate-200 focus:border-fuchsia-500 focus:outline-none"
                 />
               </div>
               <div className="flex justify-end">
@@ -568,7 +568,7 @@ export default function DisputeDetailPage() {
               <CardBody className="space-y-2 text-sm">
                 <div className="flex justify-between">
                   <span className="text-slate-500">Amount</span>
-                  <span className="font-medium tabular-nums text-emerald-300">
+                  <span className="font-medium tabular-nums text-fuchsia-300">
                     {money(dispute.resolution_amount_cents)}
                   </span>
                 </div>
@@ -630,7 +630,7 @@ export default function DisputeDetailPage() {
                 value={attachId}
                 onChange={(e) => setAttachId(e.target.value)}
                 required
-                className="w-full rounded-lg border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-slate-200 focus:border-emerald-500 focus:outline-none"
+                className="w-full rounded-lg border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-slate-200 focus:border-fuchsia-500 focus:outline-none"
               >
                 <option value="">Select a deal…</option>
                 {attachable.map((d) => (
@@ -676,7 +676,7 @@ export default function DisputeDetailPage() {
               value={resolveForm.amount}
               onChange={(e) => setResolveForm((f) => ({ ...f, amount: e.target.value }))}
               required
-              className="w-full rounded-lg border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-slate-200 focus:border-emerald-500 focus:outline-none"
+              className="w-full rounded-lg border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-slate-200 focus:border-fuchsia-500 focus:outline-none"
             />
           </div>
           <div>
@@ -688,7 +688,7 @@ export default function DisputeDetailPage() {
               onChange={(e) => setResolveForm((f) => ({ ...f, note: e.target.value }))}
               rows={3}
               placeholder="Explain the resolution decision…"
-              className="w-full rounded-lg border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-slate-200 placeholder:text-slate-600 focus:border-emerald-500 focus:outline-none"
+              className="w-full rounded-lg border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-slate-200 placeholder:text-slate-600 focus:border-fuchsia-500 focus:outline-none"
             />
           </div>
           <label className="flex items-center gap-2 text-sm text-slate-300">
@@ -696,7 +696,7 @@ export default function DisputeDetailPage() {
               type="checkbox"
               checked={resolveForm.create_adjustment}
               onChange={(e) => setResolveForm((f) => ({ ...f, create_adjustment: e.target.checked }))}
-              className="h-4 w-4 rounded border-slate-700 bg-slate-900 text-emerald-500 focus:ring-emerald-500"
+              className="h-4 w-4 rounded border-slate-700 bg-slate-900 text-fuchsia-500 focus:ring-fuchsia-500"
             />
             Create a payout adjustment for the resolved amount
           </label>
